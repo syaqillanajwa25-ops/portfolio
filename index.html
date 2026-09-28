@@ -3,14 +3,22 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Syaqila Najwa Amalia Hambali — Portfolio</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Syaqila Najwa Amalia Hambali — Data Science Portfolio
+  </title>
 
   <meta
     name="description"
-    content="Selected Data Science, Machine Learning, Deep Learning, deployment, and web development projects by Syaqila Najwa Amalia Hambali."
+    content="Data Science portfolio of Syaqila Najwa Amalia Hambali featuring Machine Learning, Deep Learning, Data Analytics, model deployment, and selected development projects."
   >
+
+  <!-- Social Preview -->
 
   <meta
     property="og:title"
@@ -19,7 +27,7 @@
 
   <meta
     property="og:description"
-    content="Selected Data Science, Machine Learning, Deep Learning, deployment, and web development projects."
+    content="Selected projects in Data Science, Machine Learning, Deep Learning, Data Analytics, model deployment, and development."
   >
 
   <meta
@@ -38,8 +46,13 @@
   >
 
   <meta
+    property="og:image:type"
+    content="image/png"
+  >
+
+  <meta
     property="og:image:alt"
-    content="Syaqila Najwa Amalia Hambali — Data Science Portfolio"
+    content="Syaqila Najwa Amalia Hambali Data Science Portfolio"
   >
 
   <meta
@@ -54,7 +67,7 @@
 
   <meta
     name="twitter:description"
-    content="Selected Data Science, Machine Learning, Deep Learning, deployment, and web development projects."
+    content="Selected projects in Data Science, Machine Learning, Deep Learning, Data Analytics, model deployment, and development."
   >
 
   <meta
@@ -62,2427 +75,222 @@
     content="https://syaqillanajwa25-ops.github.io/portfolio/assets/preview-portfolio.png"
   >
 
-  
-  <style>
-    :root {
-      --cream: #fffaf3;
-      --paper: #fffefb;
-      --ink: #202421;
-      --muted: #6b716c;
-      --line: #d9d2c8;
-
-      --turquoise: #49c9bf;
-      --turquoise-soft: #c5efea;
-      --turquoise-dark: #168f88;
-
-      --yellow: #f4d471;
-      --pink: #f3cad9;
-      --blue: #b8caf1;
-      --green: #bcdfca;
-      --purple: #d9cff4;
-      --coral: #f2a58f;
-      --peach: #f7c6a3;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 90px;
-    }
-
-    body {
-      margin: 0;
-      background: var(--cream);
-      color: var(--ink);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.62;
-      overflow-x: hidden;
-    }
-
-    body.menu-open {
-      overflow: hidden;
-    }
-
-    ::selection {
-      background: var(--turquoise);
-      color: var(--ink);
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button {
-      font: inherit;
-    }
-
-    h1,
-    h2,
-    h3,
-    p {
-      margin-top: 0;
-    }
-
-    h1,
-    h2,
-    h3 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-weight: normal;
-    }
-
-    .container {
-      width: min(1160px, calc(100% - 48px));
-      margin: auto;
-    }
-
-    /* ==================================================
-       NAV
-       ================================================== */
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-
-      background: rgba(255, 250, 243, 0.95);
-
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-
-      border-bottom: 1px solid rgba(32, 36, 33, 0.08);
-    }
-
-    .navbar {
-      min-height: 72px;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      gap: 20px;
-    }
-
-    .brand {
-      position: relative;
-      z-index: 1200;
-
-      font-family: Georgia, serif;
-      font-size: 21px;
-      font-weight: bold;
-    }
-
-    .brand span {
-      color: var(--turquoise-dark);
-    }
-
-    .desktop-nav {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-
-      font-size: 13px;
-    }
-
-    .desktop-nav a {
-      transition: 0.18s ease;
-    }
-
-    .desktop-nav a:hover {
-      color: var(--turquoise-dark);
-    }
-
-    .nav-pill {
-      padding: 8px 14px;
-
-      border: 1px solid var(--ink);
-      border-radius: 100px;
-    }
-
-    .nav-pill.dark {
-      background: var(--ink);
-      color: white;
-    }
-
-    /* MOBILE BUTTON */
-
-    .menu-button {
-      display: none;
-
-      position: relative;
-      z-index: 1200;
-
-      width: 46px;
-      height: 46px;
-
-      background: var(--cream);
-
-      border: 1px solid var(--ink);
-      border-radius: 50%;
-
-      cursor: pointer;
-    }
-
-    .menu-button span {
-      position: absolute;
-      left: 13px;
-
-      width: 18px;
-      height: 1.5px;
-
-      background: var(--ink);
-
-      transition: 0.2s ease;
-    }
-
-    .menu-button span:nth-child(1) {
-      top: 16px;
-    }
-
-    .menu-button span:nth-child(2) {
-      top: 22px;
-    }
-
-    .menu-button span:nth-child(3) {
-      top: 28px;
-    }
-
-    .menu-button.active span:nth-child(1) {
-      top: 22px;
-      transform: rotate(45deg);
-    }
-
-    .menu-button.active span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .menu-button.active span:nth-child(3) {
-      top: 22px;
-      transform: rotate(-45deg);
-    }
-
-    .mobile-menu {
-      display: none;
-    }
-
-    /* ==================================================
-       GENERAL
-       ================================================== */
-
-    section {
-      padding: 105px 0;
-    }
-
-    .section-label {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-
-      margin-bottom: 48px;
-
-      font-size: 10px;
-      font-weight: bold;
-
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-
-    .section-label span {
-      color: var(--turquoise-dark);
-    }
-
-    .section-label::after {
-      content: "";
-
-      flex: 1;
-      height: 1px;
-
-      background: var(--line);
-    }
-
-    .button {
-      min-height: 44px;
-
-      padding: 10px 18px;
-
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-
-      border: 1px solid var(--ink);
-      border-radius: 100px;
-
-      font-size: 13px;
-      font-weight: bold;
-
-      transition: 0.18s ease;
-    }
-
-    .button:hover {
-      transform: translateY(-3px);
-    }
-
-    .button-dark {
-      background: var(--ink);
-      color: white;
-    }
-
-    .button-turquoise {
-      background: var(--turquoise);
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-
-      margin-top: 14px;
-    }
-
-    .tags span {
-      padding: 5px 9px;
-
-      background: rgba(255,255,255,0.45);
-
-      border: 1px solid var(--ink);
-      border-radius: 100px;
-
-      font-size: 10px;
-    }
-
-    /* ==================================================
-       HERO
-       ================================================== */
-
-    .hero {
-      position: relative;
-
-      padding-top: 100px;
-
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: "";
-
-      position: absolute;
-      top: -150px;
-      right: -130px;
-
-      width: 405px;
-      height: 405px;
-
-      background: var(--turquoise-soft);
-
-      border-radius: 50%;
-
-      z-index: -1;
-    }
-
-    .hero::after {
-      content: "";
-
-      position: absolute;
-      left: -100px;
-      bottom: 40px;
-
-      width: 210px;
-      height: 210px;
-
-      border: 1px solid rgba(32, 36, 33, 0.07);
-      border-radius: 50%;
-
-      z-index: -1;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.08fr 0.92fr;
-      gap: 82px;
-
-      align-items: center;
-    }
-
-    .hero-kicker {
-      display: inline-block;
-
-      margin-bottom: 22px;
-      padding: 7px 13px;
-
-      background: var(--yellow);
-
-      border: 1px solid var(--ink);
-      border-radius: 100px;
-
-      font-size: 12px;
-      font-weight: bold;
-
-      transform: rotate(-2deg);
-    }
-
-    h1 {
-      margin-bottom: 29px;
-
-      max-width: 700px;
-
-      font-size: clamp(69px, 8vw, 116px);
-
-      line-height: 0.88;
-      letter-spacing: -0.055em;
-    }
-
-    h1 .accent {
-      color: var(--turquoise-dark);
-      font-style: italic;
-    }
-
-    .hero-lead {
-      max-width: 610px;
-
-      color: #414843;
-
-      font-size: 18px;
-    }
-
-    .hero-small {
-      max-width: 570px;
-
-      color: var(--muted);
-
-      font-size: 15px;
-    }
-
-    .hero-actions {
-      margin-top: 28px;
-
-      display: flex;
-      flex-wrap: wrap;
-      gap: 11px;
-    }
-
-    .hero-note {
-      display: inline-block;
-
-      margin-top: 28px;
-      margin-left: 12px;
-
-      padding: 8px 12px;
-
-      background: var(--coral);
-
-      border: 1px solid var(--ink);
-      border-radius: 4px;
-
-      font-family: Georgia, serif;
-      font-size: 12px;
-      font-style: italic;
-
-      transform: rotate(2deg);
-    }
-
-    /* PROFILE */
-
-    .profile-wrap {
-      position: relative;
-
-      width: min(390px, 100%);
-
-      margin-left: auto;
-    }
-
-    .profile-back {
-      position: absolute;
-
-      inset: 0;
-      left: -17px;
-      bottom: -17px;
-
-      background: var(--turquoise);
-
-      border: 1px solid var(--ink);
-      border-radius: 36px;
-
-      transform: rotate(-4deg);
-    }
-
-    .profile-card {
-      position: relative;
-
-      height: 485px;
-
-      background: white;
-
-      border: 1px solid var(--ink);
-      border-radius: 36px;
-
-      overflow: hidden;
-    }
-
-    .profile-card img {
-      width: 100%;
-      height: 100%;
-
-      object-fit: cover;
-    }
-
-    .profile-location {
-      position: absolute;
-      right: -21px;
-      bottom: 34px;
-
-      padding: 10px 15px;
-
-      background: var(--yellow);
-
-      border: 1px solid var(--ink);
-      border-radius: 8px;
-
-      font-family: Georgia, serif;
-      font-style: italic;
-
-      transform: rotate(4deg);
-    }
-
-    .hero-bottom {
-      margin-top: 78px;
-
-      padding: 17px 0;
-
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-
-      display: flex;
-      flex-wrap: wrap;
-      gap: 27px;
-
-      color: var(--muted);
-
-      font-size: 13px;
-    }
-
-    .hero-bottom span::before {
-      content: "•";
-
-      margin-right: 8px;
-
-      color: var(--turquoise-dark);
-    }
-
-    /* ==================================================
-       ABOUT
-       ================================================== */
-
-    .about {
-      background: var(--paper);
-
-      border-bottom: 1px solid var(--line);
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 0.72fr 1.28fr;
-      gap: 90px;
-    }
-
-    .about-left h2 {
-      margin-bottom: 22px;
-
-      font-size: clamp(51px, 5vw, 75px);
-
-      line-height: 0.95;
-      letter-spacing: -0.045em;
-    }
-
-    .about-side-note {
-      max-width: 290px;
-
-      color: var(--muted);
-
-      font-size: 14px;
-    }
-
-    .about-sticky {
-      display: inline-block;
-
-      margin-top: 28px;
-
-      padding: 10px 13px;
-
-      background: var(--yellow);
-
-      border: 1px solid var(--ink);
-      border-radius: 5px;
-
-      font-family: Georgia, serif;
-      font-size: 13px;
-
-      transform: rotate(-2deg);
-
-      box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
-    }
-
-    .about-right {
-      color: #424944;
-
-      font-size: 16px;
-    }
-
-    .about-right > p {
-      max-width: 720px;
-
-      margin-bottom: 19px;
-    }
-
-    .facts-layout {
-      margin-top: 35px;
-
-      display: grid;
-      grid-template-columns: 1.14fr 0.86fr;
-
-      gap: 13px;
-    }
-
-    .fact-main {
-      padding: 25px;
-
-      background: var(--turquoise-soft);
-
-      border: 1px solid var(--ink);
-      border-radius: 20px;
-
-      display: grid;
-      grid-template-columns: 0.95fr 1.05fr;
-      gap: 24px;
-
-      align-items: center;
-    }
-
-    .fact-main small,
-    .fact-side small {
-      display: block;
-
-      margin-bottom: 10px;
-
-      font-size: 9px;
-      font-weight: bold;
-
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .fact-main strong {
-      display: block;
-
-      font-family: Georgia, serif;
-
-      font-size: 27px;
-
-      line-height: 1.13;
-    }
-
-    .fact-main p {
-      margin: 0;
-
-      color: #515752;
-
-      font-size: 13px;
-    }
-
-    .fact-stack {
-      display: grid;
-      gap: 13px;
-    }
-
-    .fact-side {
-      padding: 19px;
-
-      border: 1px solid var(--ink);
-      border-radius: 18px;
-    }
-
-    .fact-side.languages {
-      background: var(--yellow);
-
-      transform: rotate(0.5deg);
-    }
-
-    .fact-side.personal {
-      background: var(--pink);
-
-      transform: rotate(-0.5deg);
-    }
-
-    .fact-side strong {
-      font-family: Georgia, serif;
-
-      font-size: 18px;
-
-      line-height: 1.25;
-    }
-
-    .fact-side p {
-      margin: 4px 0 0;
-
-      color: #505650;
-
-      font-size: 12px;
-    }
-
-    /* ==================================================
-       SKILLS
-       ================================================== */
-
-    .skills-heading {
-      display: grid;
-      grid-template-columns: 0.88fr 1.12fr;
-      gap: 70px;
-
-      align-items: end;
-
-      margin-bottom: 44px;
-    }
-
-    .skills-heading h2 {
-      margin: 0;
-
-      font-size: clamp(50px, 5vw, 70px);
-
-      line-height: 0.96;
-      letter-spacing: -0.04em;
-    }
-
-    .skills-heading p {
-      max-width: 500px;
-
-      margin: 0;
-
-      color: var(--muted);
-    }
-
-    .skills-bento {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-
-      gap: 14px;
-    }
-
-    .skill-card {
-      min-height: 205px;
-
-      padding: 27px;
-
-      border: 1px solid var(--ink);
-      border-radius: 22px;
-
-      display: flex;
-      flex-direction: column;
-
-      transition: 0.18s ease;
-    }
-
-    .skill-card:hover {
-      transform: translateY(-4px) rotate(0deg);
-
-      box-shadow: 6px 6px 0 var(--ink);
-    }
-
-    .skill-data {
-      grid-column: span 7;
-
-      background: var(--turquoise-soft);
-
-      transform: rotate(-0.4deg);
-    }
-
-    .skill-deep {
-      grid-column: span 5;
-
-      background: var(--blue);
-
-      transform: rotate(0.4deg);
-    }
-
-    .skill-cloud {
-      grid-column: span 5;
-
-      background: var(--green);
-
-      transform: rotate(-0.3deg);
-    }
-
-    .skill-dev {
-      grid-column: span 7;
-
-      background: var(--purple);
-
-      transform: rotate(0.3deg);
-    }
-
-    .skill-number {
-      margin-bottom: 27px;
-
-      font-size: 10px;
-      font-weight: bold;
-    }
-
-    .skill-card h3 {
-      margin: 0 0 13px;
-
-      font-size: 29px;
-
-      line-height: 1;
-    }
-
-    .skill-card p {
-      max-width: 500px;
-
-      margin: 0;
-
-      color: #474d48;
-
-      font-size: 14px;
-    }
-
-    .skill-data h3,
-    .skill-dev h3 {
-      font-size: 34px;
-    }
-
-    .education {
-      margin-top: 18px;
-
-      padding: 22px 27px;
-
-      background: var(--paper);
-
-      border: 1px solid var(--ink);
-      border-radius: 20px;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 25px;
-    }
-
-    .education strong {
-      font-family: Georgia, serif;
-
-      font-size: 20px;
-    }
-
-    .education span {
-      color: var(--muted);
-
-      font-size: 13px;
-    }
-
-    /* ==================================================
-       PROJECTS
-       ================================================== */
-
-    .projects {
-      background: #f3eee6;
-
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .projects-heading {
-      display: grid;
-      grid-template-columns: 0.82fr 1.18fr;
-      gap: 70px;
-
-      align-items: end;
-
-      margin-bottom: 52px;
-    }
-
-    .projects-heading h2 {
-      margin: 0;
-
-      font-size: clamp(52px, 5vw, 76px);
-
-      line-height: 0.94;
-      letter-spacing: -0.045em;
-    }
-
-    .projects-heading p {
-      max-width: 530px;
-
-      margin: 0;
-
-      color: var(--muted);
-    }
-
-    /* CREDIT SCORE */
-
-    .featured-project {
-      position: relative;
-
-      margin-bottom: 21px;
-
-      overflow: hidden;
-
-      background: var(--paper);
-
-      border: 1px solid var(--ink);
-      border-radius: 28px;
-    }
-
-    .featured-inner {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-    }
-
-    .project-copy {
-      padding: 39px;
-
-      display: flex;
-      flex-direction: column;
-    }
-
-    .project-index {
-      margin-bottom: 20px;
-
-      color: var(--turquoise-dark);
-
-      font-size: 10px;
-      font-weight: bold;
-
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .project-copy h3 {
-      margin-bottom: 16px;
-
-      font-size: clamp(35px, 4vw, 50px);
-
-      line-height: 1;
-      letter-spacing: -0.03em;
-    }
-
-    .project-copy p {
-      color: #474d48;
-
-      font-size: 14px;
-    }
-
-    .metric {
-      margin-top: 13px;
-      padding: 13px 15px;
-
-      background: var(--cream);
-
-      border-left: 4px solid var(--turquoise-dark);
-
-      font-size: 13px;
-    }
-
-    .project-link {
-      margin-top: auto;
-      padding-top: 24px;
-
-      font-size: 12px;
-      font-weight: bold;
-    }
-
-    .project-link:hover {
-      color: var(--turquoise-dark);
-    }
-
-    .credit-images {
-      position: relative;
-
-      padding: 24px;
-
-      background: var(--turquoise);
-
-      border-left: 1px solid var(--ink);
-
-      display: grid;
-      gap: 12px;
-
-      align-content: center;
-    }
-
-    .credit-images img {
-      width: 100%;
-
-      background: white;
-
-      border: 1px solid var(--ink);
-      border-radius: 12px;
-    }
-
-    .visual-note {
-      position: absolute;
-      top: 16px;
-      left: 16px;
-
-      padding: 6px 10px;
-
-      background: var(--yellow);
-
-      border: 1px solid var(--ink);
-      border-radius: 4px;
-
-      font-size: 9px;
-      font-weight: bold;
-
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-
-      transform: rotate(-2deg);
-
-      z-index: 2;
-    }
-
-    /* STORY PROJECT */
-
-    .project-story {
-      margin-top: 20px;
-
-      overflow: hidden;
-
-      background: var(--paper);
-
-      border: 1px solid var(--ink);
-      border-radius: 24px;
-
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .project-story.reverse .story-visual {
-      order: 2;
-    }
-
-    .project-story.reverse .story-copy {
-      order: 1;
-    }
-
-    .story-visual {
-      position: relative;
-
-      min-height: 350px;
-
-      padding: 24px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .story-visual.blue {
-      background: var(--blue);
-    }
-
-    .story-visual.turquoise {
-      background: var(--turquoise-soft);
-    }
-
-    .story-visual.green {
-      background: var(--green);
-    }
-
-    .story-visual.pink {
-      background: var(--pink);
-    }
-
-    .story-visual img {
-      width: 100%;
-      max-height: 320px;
-
-      object-fit: contain;
-    }
-
-    .story-copy {
-      padding: 37px;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .story-copy h3 {
-      margin-bottom: 14px;
-
-      font-size: 34px;
-
-      line-height: 1.02;
-    }
-
-    .story-copy p {
-      color: #4b514c;
-
-      font-size: 14px;
-    }
-
-    /* PLACEMENT */
-
-    .placement-ui {
-      width: 84%;
-      max-width: 400px;
-
-      display: grid;
-      gap: 11px;
-    }
-
-    .placement-title {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      gap: 10px;
-    }
-
-    .placement-label {
-      width: max-content;
-
-      padding: 8px 12px;
-
-      background: var(--ink);
-      color: white;
-
-      border-radius: 100px;
-
-      font-size: 9px;
-      font-weight: bold;
-
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-    }
-
-    .placement-dot {
-      width: 11px;
-      height: 11px;
-
-      background: var(--coral);
-
-      border: 1px solid var(--ink);
-      border-radius: 50%;
-    }
-
-    .placement-result {
-      padding: 18px 20px;
-
-      background: var(--paper);
-
-      border: 1px solid var(--ink);
-      border-radius: 16px;
-    }
-
-    .placement-result small {
-      display: block;
-
-      margin-bottom: 5px;
-
-      color: var(--muted);
-
-      font-size: 9px;
-
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .placement-result strong {
-      font-family: Georgia, serif;
-
-      font-size: 30px;
-    }
-
-    .placement-result.salary {
-      width: 90%;
-
-      margin-left: auto;
-
-      background: var(--yellow);
-
-      transform: rotate(1deg);
-    }
-
-    /* GAN */
-
-    .gan-layout {
-      width: 84%;
-
-      display: grid;
-      gap: 11px;
-    }
-
-    .gan-card {
-      padding: 17px 19px;
-
-      background: var(--paper);
-
-      border: 1px solid var(--ink);
-      border-radius: 14px;
-
-      font-family: Georgia, serif;
-
-      font-size: 21px;
-    }
-
-    .gan-card.bottom {
-      margin-left: 45px;
-
-      background: var(--turquoise-soft);
-    }
-
-    .gan-caption {
-      margin-left: 23px;
-
-      font-size: 10px;
-      font-weight: bold;
-
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    /* CLASH */
-
-    .clash-project {
-      margin-top: 20px;
-
-      overflow: hidden;
-
-      background: var(--paper);
-
-      border: 1px solid var(--ink);
-      border-radius: 25px;
-    }
-
-    .clash-gallery {
-      padding: 18px;
-
-      background: var(--turquoise-soft);
-
-      border-bottom: 1px solid var(--ink);
-
-      display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      gap: 10px;
-    }
-
-    .clash-main img {
-      width: 100%;
-      height: 430px;
-
-      object-fit: contain;
-
-      background: #111;
-
-      border: 1px solid var(--ink);
-      border-radius: 12px;
-    }
-
-    .clash-side {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 9px;
-    }
-
-    .clash-side img {
-      width: 100%;
-      height: 210px;
-
-      object-fit: contain;
-
-      background: #111;
-
-      border: 1px solid var(--ink);
-      border-radius: 12px;
-    }
-
-    .clash-copy {
-      padding: 30px 34px;
-
-      display: grid;
-      grid-template-columns: 0.7fr 1.3fr;
-      gap: 45px;
-    }
-
-    .clash-copy h3 {
-      margin: 0;
-
-      font-size: 38px;
-
-      line-height: 1;
-    }
-
-    .clash-copy p {
-      color: #4b514c;
-
-      font-size: 14px;
-    }
-
-    .all-projects {
-      margin-top: 35px;
-    }
-
-    /* ==================================================
-       EXPERIENCE
-       ================================================== */
-
-    .experience-heading {
-      display: grid;
-      grid-template-columns: 0.82fr 1.18fr;
-      gap: 70px;
-
-      align-items: end;
-
-      margin-bottom: 52px;
-    }
-
-    .experience-heading h2 {
-      margin: 0;
-
-      font-size: clamp(50px, 5vw, 73px);
-
-      line-height: 0.96;
-      letter-spacing: -0.04em;
-    }
-
-    .experience-heading p {
-      max-width: 520px;
-
-      margin: 0;
-
-      color: var(--muted);
-    }
-
-    .experience-list {
-      display: grid;
-      gap: 21px;
-    }
-
-    .experience-row {
-      position: relative;
-
-      overflow: hidden;
-
-      background: var(--paper);
-
-      border: 1px solid var(--ink);
-      border-radius: 24px;
-
-      display: grid;
-      grid-template-columns: 0.92fr 1.08fr;
-    }
-
-    .experience-row.reverse .experience-images {
-      order: 1;
-    }
-
-    .experience-row.reverse .experience-copy {
-      order: 2;
-    }
-
-    .experience-number {
-      position: absolute;
-      top: 11px;
-      right: 18px;
-
-      font-family: Georgia, serif;
-
-      font-size: 65px;
-
-      color: rgba(32, 36, 33, 0.05);
-
-      line-height: 1;
-
-      pointer-events: none;
-    }
-
-    .experience-copy {
-      padding: 33px;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .experience-title {
-      margin-bottom: 21px;
-
-      display: flex;
-      align-items: center;
-      gap: 13px;
-    }
-
-    .experience-logo,
-    .experience-badge {
-      width: 58px;
-      height: 58px;
-
-      flex-shrink: 0;
-
-      background: white;
-
-      border: 1px solid var(--ink);
-      border-radius: 14px;
-    }
-
-    .experience-logo {
-      padding: 6px;
-
-      object-fit: contain;
-    }
-
-    .experience-badge {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      background: var(--turquoise-soft);
-
-      font-family: Georgia, serif;
-
-      font-size: 17px;
-    }
-
-    .experience-title h3 {
-      margin: 0;
-
-      font-size: 25px;
-
-      line-height: 1.05;
-    }
-
-    .role {
-      margin-top: 3px;
-
-      color: var(--turquoise-dark);
-
-      font-size: 12px;
-    }
-
-    .date {
-      margin-top: 4px;
-
-      color: var(--muted);
-
-      font-size: 9px;
-
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .experience-copy p {
-      margin-bottom: 12px;
-
-      color: #474d48;
-
-      font-size: 14px;
-    }
-
-    .experience-copy p:last-child {
-      margin-bottom: 0;
-    }
-
-    .experience-images {
-      padding: 17px;
-
-      background: var(--turquoise-soft);
-
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 9px;
-    }
-
-    .experience-images.one {
-      grid-template-columns: 1fr;
-    }
-
-    .experience-images img {
-      width: 100%;
-      height: 300px;
-
-      object-fit: cover;
-
-      border: 1px solid var(--ink);
-      border-radius: 16px;
-    }
-
-    .experience-row:nth-child(2) .experience-images {
-      background: var(--yellow);
-    }
-
-    .experience-row:nth-child(3) .experience-images {
-      background: var(--pink);
-    }
-
-    .experience-row:nth-child(4) .experience-images {
-      background: var(--blue);
-    }
-
-    /* ==================================================
-       HOBBIES
-       ================================================== */
-
-    .off-duty {
-      padding: 90px 0;
-
-      background: var(--turquoise-dark);
-      color: white;
-    }
-
-    .off-grid {
-      display: grid;
-      grid-template-columns: 0.82fr 1.18fr;
-      gap: 75px;
-
-      align-items: center;
-    }
-
-    .off-copy small {
-      display: block;
-
-      margin-bottom: 12px;
-
-      opacity: 0.82;
-
-      font-size: 10px;
-      font-weight: bold;
-
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .off-copy h2 {
-      margin-bottom: 18px;
-
-      font-size: clamp(49px, 5vw, 69px);
-
-      line-height: 0.95;
-      letter-spacing: -0.04em;
-    }
-
-    .off-copy p {
-      max-width: 430px;
-
-      margin: 0;
-
-      color: rgba(255,255,255,0.82);
-
-      font-size: 15px;
-    }
-
-    .hobby-board {
-      padding: 24px;
-
-      background: var(--cream);
-      color: var(--ink);
-
-      border: 1px solid var(--ink);
-      border-radius: 28px;
-
-      box-shadow: 8px 8px 0 rgba(0,0,0,0.18);
-
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 11px;
-    }
-
-    .hobby-item {
-      min-height: 110px;
-
-      padding: 17px;
-
-      border: 1px solid var(--ink);
-      border-radius: 18px;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-      transition: 0.18s ease;
-    }
-
-    .hobby-item:hover {
-      transform: translateY(-3px);
-    }
-
-    .hobby-item:nth-child(1) {
-      grid-column: span 4;
-
-      background: var(--yellow);
-
-      transform: rotate(-0.8deg);
-    }
-
-    .hobby-item:nth-child(2) {
-      grid-column: span 2;
-
-      background: var(--pink);
-
-      transform: rotate(0.8deg);
-    }
-
-    .hobby-item:nth-child(3) {
-      grid-column: span 2;
-
-      background: var(--blue);
-
-      transform: rotate(-0.5deg);
-    }
-
-    .hobby-item:nth-child(4) {
-      grid-column: span 4;
-
-      background: var(--turquoise);
-
-      transform: rotate(0.5deg);
-    }
-
-    .hobby-item:nth-child(5) {
-      grid-column: 2 / 6;
-
-      background: var(--green);
-
-      transform: rotate(-0.5deg);
-    }
-
-    .hobby-item small {
-      font-size: 9px;
-      font-weight: bold;
-
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-    }
-
-    .hobby-item strong {
-      font-family: Georgia, serif;
-
-      font-size: 21px;
-    }
-
-    /* ==================================================
-       CONTACT
-       ================================================== */
-
-    .contact-box {
-      position: relative;
-
-      padding: 52px;
-
-      background: var(--turquoise);
-
-      border: 1px solid var(--ink);
-      border-radius: 30px;
-
-      box-shadow: 8px 8px 0 var(--ink);
-
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 55px;
-
-      align-items: end;
-
-      overflow: hidden;
-    }
-
-    .contact-box::after {
-      content: "";
-
-      position: absolute;
-      right: -65px;
-      top: -75px;
-
-      width: 190px;
-      height: 190px;
-
-      border: 1px solid rgba(32,36,33,0.18);
-      border-radius: 50%;
-    }
-
-    .contact-box small {
-      display: block;
-
-      margin-bottom: 13px;
-
-      font-size: 10px;
-      font-weight: bold;
-
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .contact-box h2 {
-      margin: 0;
-
-      font-size: clamp(52px, 5vw, 75px);
-
-      line-height: 0.93;
-      letter-spacing: -0.05em;
-    }
-
-    .contact-right {
-      position: relative;
-      z-index: 1;
-
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 11px;
-
-      font-size: 14px;
-    }
-
-    .contact-right p {
-      margin-bottom: 7px;
-    }
-
-    .contact-right a {
-      border-bottom: 1px solid var(--ink);
-    }
-
-    footer {
-      padding: 30px 0;
-
-      color: var(--muted);
-
-      font-size: 12px;
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    /* ==================================================
-       TABLET
-       ================================================== */
-
-    @media (max-width: 950px) {
-
-      .hero-grid,
-      .about-grid,
-      .skills-heading,
-      .projects-heading,
-      .featured-inner,
-      .project-story,
-      .experience-heading,
-      .experience-row,
-      .off-grid,
-      .contact-box {
-        grid-template-columns: 1fr;
-      }
-
-      .profile-wrap {
-        margin: auto;
-      }
-
-      .facts-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .credit-images {
-        border-left: 0;
-        border-top: 1px solid var(--ink);
-      }
-
-      .project-story.reverse .story-visual,
-      .project-story.reverse .story-copy,
-      .experience-row.reverse .experience-images,
-      .experience-row.reverse .experience-copy {
-        order: initial;
-      }
-
-      .clash-copy {
-        grid-template-columns: 1fr;
-
-        gap: 15px;
-      }
-
-    }
-
-    /* ==================================================
-       MOBILE
-       ================================================== */
-
-    @media (max-width: 720px) {
-
-      .container {
-        width: calc(100% - 30px);
-      }
-
-      section {
-        padding: 72px 0;
-      }
-
-      header {
-        background: var(--cream);
-
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-      }
-
-      .desktop-nav {
-        display: none;
-      }
-
-      .menu-button {
-        display: block;
-      }
-
-      /* MOBILE MENU */
-
-      .mobile-menu {
-        position: fixed;
-        inset: 0;
-
-        z-index: 1050;
-
-        width: 100%;
-        height: 100vh;
-        height: 100dvh;
-
-        padding: 115px 28px 32px;
-
-        background: var(--cream);
-
-        display: flex;
-        flex-direction: column;
-
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-
-        transform: translateY(-8px);
-
-        transition: 0.2s ease;
-      }
-
-      .mobile-menu.active {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-
-        transform: translateY(0);
-      }
-
-      .mobile-menu-links {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-      }
-
-      .mobile-menu-links a {
-        font-family: Georgia, serif;
-
-        font-size: clamp(43px, 13vw, 58px);
-
-        line-height: 1.05;
-        letter-spacing: -0.04em;
-      }
-
-      .mobile-socials {
-        margin-top: auto;
-
-        padding-top: 22px;
-
-        border-top: 1px solid var(--line);
-
-        display: flex;
-        gap: 9px;
-      }
-
-      .mobile-socials a {
-        padding: 9px 14px;
-
-        border: 1px solid var(--ink);
-        border-radius: 100px;
-
-        font-size: 12px;
-        font-weight: bold;
-      }
-
-      .mobile-socials a:first-child {
-        background: var(--turquoise);
-      }
-
-      .mobile-socials a:last-child {
-        background: var(--ink);
-        color: white;
-      }
-
-      /* HERO */
-
-      .hero {
-        padding-top: 65px;
-      }
-
-      .hero-grid {
-        gap: 55px;
-      }
-
-      h1 {
-        font-size: clamp(60px, 18vw, 82px);
-      }
-
-      .hero-lead {
-        font-size: 16px;
-      }
-
-      .hero-small {
-        font-size: 14px;
-      }
-
-      .hero-actions {
-        flex-direction: column;
-      }
-
-      .hero-actions .button {
-        width: 100%;
-      }
-
-      .hero-note {
-        margin-left: 5px;
-      }
-
-      .profile-wrap {
-        max-width: 320px;
-      }
-
-      .profile-card {
-        height: 410px;
-      }
-
-      .profile-back {
-        left: -10px;
-        bottom: -10px;
-      }
-
-      .profile-location {
-        right: -2px;
-      }
-
-      .hero-bottom {
-        margin-top: 60px;
-
-        gap: 12px 18px;
-      }
-
-      /* ABOUT */
-
-      .about-grid {
-        gap: 38px;
-      }
-
-      .about-left h2 {
-        font-size: 49px;
-      }
-
-      .fact-main {
-        grid-template-columns: 1fr;
-      }
-
-      /* SKILLS */
-
-      .skills-heading {
-        gap: 20px;
-      }
-
-      .skills-heading h2 {
-        font-size: 48px;
-      }
-
-      .skills-bento {
-        grid-template-columns: 1fr;
-      }
-
-      .skill-data,
-      .skill-deep,
-      .skill-cloud,
-      .skill-dev {
-        grid-column: auto;
-
-        transform: none;
-      }
-
-      .skill-card {
-        min-height: auto;
-      }
-
-      .skill-data h3,
-      .skill-dev h3,
-      .skill-card h3 {
-        font-size: 28px;
-      }
-
-      .skill-number {
-        margin-bottom: 24px;
-      }
-
-      .education {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      /* PROJECTS */
-
-      .projects-heading {
-        gap: 20px;
-      }
-
-      .projects-heading h2 {
-        font-size: 49px;
-      }
-
-      .project-copy,
-      .story-copy {
-        padding: 26px;
-      }
-
-      .credit-images {
-        padding: 15px;
-      }
-
-      .story-visual {
-        min-height: 250px;
-      }
-
-      .placement-ui {
-        width: 94%;
-      }
-
-      .placement-result.salary {
-        width: 94%;
-      }
-
-      .clash-gallery {
-        grid-template-columns: 1fr;
-
-        padding: 13px;
-      }
-
-      .clash-main img {
-        height: auto;
-      }
-
-      .clash-side {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .clash-side img {
-        height: auto;
-        min-height: 160px;
-      }
-
-      .clash-copy {
-        padding: 27px;
-      }
-
-      /* EXPERIENCE */
-
-      .experience-heading {
-        gap: 20px;
-      }
-
-      .experience-heading h2 {
-        font-size: 48px;
-      }
-
-      .experience-copy {
-        padding: 25px;
-      }
-
-      .experience-images {
-        grid-template-columns: 1fr;
-
-        padding: 13px;
-      }
-
-      .experience-images img {
-        height: auto;
-        max-height: 400px;
-      }
-
-      .experience-number {
-        font-size: 50px;
-      }
-
-      /* HOBBY */
-
-      .off-grid {
-        gap: 36px;
-      }
-
-      .off-copy h2 {
-        font-size: 47px;
-      }
-
-      .hobby-board {
-        grid-template-columns: 1fr 1fr;
-
-        padding: 18px;
-      }
-
-      .hobby-item:nth-child(1),
-      .hobby-item:nth-child(2),
-      .hobby-item:nth-child(3),
-      .hobby-item:nth-child(4) {
-        grid-column: span 1;
-
-        transform: none;
-      }
-
-      .hobby-item:nth-child(5) {
-        grid-column: 1 / 3;
-
-        transform: none;
-      }
-
-      .hobby-item {
-        min-height: 105px;
-      }
-
-      /* CONTACT */
-
-      .contact-box {
-        padding: 31px;
-
-        gap: 34px;
-      }
-
-      .contact-box h2 {
-        font-size: 50px;
-      }
-
-      .contact-right a {
-        word-break: break-word;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-      }
-
-    }
-
-    @media (max-width: 430px) {
-
-      .container {
-        width: calc(100% - 24px);
-      }
-
-      section {
-        padding: 62px 0;
-      }
-
-      h1 {
-        font-size: 58px;
-      }
-
-      .about-left h2,
-      .skills-heading h2,
-      .projects-heading h2,
-      .experience-heading h2,
-      .off-copy h2,
-      .contact-box h2 {
-        font-size: 42px;
-      }
-
-      .clash-side {
-        grid-template-columns: 1fr;
-      }
-
-    }
-
-    /* ==================================================
-       PRINT / PDF
-       ================================================== */
-
-    @media print {
-
-      * {
-        print-color-adjust: exact !important;
-        -webkit-print-color-adjust: exact !important;
-      }
-
-      header,
-      .mobile-menu,
-      .menu-button {
-        display: none !important;
-      }
-
-      body {
-        background: white;
-      }
-
-      section {
-        padding: 42px 0;
-      }
-
-      .container {
-        width: 92%;
-      }
-
-      .hero {
-        padding-top: 35px;
-      }
-
-      .featured-project,
-      .project-story,
-      .clash-project,
-      .experience-row,
-      .skill-card,
-      .fact-main,
-      .fact-side,
-      .contact-box {
-        break-inside: avoid;
-      }
-
-      .button {
-        display: none;
-      }
-
-      .skill-card,
-      .hobby-item,
-      .placement-result,
-      .about-sticky,
-      .hero-note {
-        transform: none !important;
-      }
-
-      .skill-card:hover,
-      .hobby-item:hover {
-        transform: none;
-        box-shadow: none;
-      }
-
-    }
-
-  </style>
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+  <script src="script.js"></script>
 </head>
 
 
 <body>
 
+  <!-- NAVIGATION -->
 
-  <!-- NAV -->
+  <header
+    class="header"
+    id="header"
+  >
 
-  <header>
+    <nav class="nav container">
 
-    <div class="navbar container">
-
-      <a href="#" class="brand">
+      <a
+        href="#home"
+        class="nav-logo"
+      >
         Syaqila<span>.</span>
       </a>
 
 
-      <nav class="desktop-nav">
+      <div
+        class="nav-menu"
+        id="navMenu"
+      >
 
-        <a href="#about">
+        <a
+          href="#home"
+          class="nav-link active"
+        >
+          Home
+        </a>
+
+        <a
+          href="#about"
+          class="nav-link"
+        >
           About
         </a>
 
-        <a href="#skills">
+        <a
+          href="#skills"
+          class="nav-link"
+        >
           Skills
         </a>
 
-        <a href="#projects">
+        <a
+          href="#projects"
+          class="nav-link"
+        >
           Projects
         </a>
 
-        <a href="#experience">
+        <a
+          href="#experience"
+          class="nav-link"
+        >
           Experience
         </a>
 
         <a
-          href="https://www.linkedin.com/in/syaqilanajwa/"
-          target="_blank"
-          class="nav-pill">
-
-          LinkedIn
-
+          href="#contact"
+          class="nav-link"
+        >
+          Contact
         </a>
 
-        <a
-          href="https://github.com/syaqillanajwa25-ops"
-          target="_blank"
-          class="nav-pill dark">
-
-          GitHub
-
-        </a>
-
-      </nav>
+      </div>
 
 
-      <button
-        class="menu-button"
-        id="menuButton"
-        aria-label="Open menu"
-        aria-expanded="false">
+      <div class="nav-actions">
 
-        <span></span>
-        <span></span>
-        <span></span>
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          type="button"
+          aria-label="Switch theme"
+          title="Switch theme"
+        >
+          ☾
+        </button>
 
-      </button>
 
-    </div>
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+        </button>
+
+      </div>
+
+    </nav>
 
   </header>
 
 
-  <!-- MOBILE MENU -->
-
-  <div class="mobile-menu" id="mobileMenu">
-
-    <div class="mobile-menu-links">
-
-      <a href="#about">
-        About
-      </a>
-
-      <a href="#skills">
-        Skills
-      </a>
-
-      <a href="#projects">
-        Projects
-      </a>
-
-      <a href="#experience">
-        Experience
-      </a>
-
-    </div>
-
-
-    <div class="mobile-socials">
-
-      <a
-        href="https://www.linkedin.com/in/syaqilanajwa/"
-        target="_blank">
-
-        LinkedIn
-
-      </a>
-
-      <a
-        href="https://github.com/syaqillanajwa25-ops"
-        target="_blank">
-
-        GitHub
-
-      </a>
-
-    </div>
-
-  </div>
-
-
   <main>
-
 
     <!-- HERO -->
 
-    <section class="hero">
+    <section
+      class="hero"
+      id="home"
+    >
 
-      <div class="container">
+      <div class="hero-container container">
 
-        <div class="hero-grid">
+        <div class="hero-content">
 
-          <div>
-
-            <div class="hero-kicker">
-              Hi, I’m Syaqila!
-            </div>
-
-
-            <h1>
-              I like data
-              that makes me
-              <span class="accent">
-                curious.
-              </span>
-            </h1>
+          <p class="hero-eyebrow">
+            Hello, I'm
+          </p>
 
 
-            <p class="hero-lead">
-              I’m a Data Science undergraduate at BINUS University.
-              I like digging into data, testing different approaches,
-              and seeing how the result changes along the way.
-            </p>
+          <h1>
+            Syaqila Najwa<br>
+            Amalia Hambali
+          </h1>
 
 
-            <p class="hero-small">
-              At the moment, I’m most interested in Data Analytics
-              and Machine Learning, but I’m still open to exploring
-              other areas around Data Science.
-            </p>
+          <h2>
+            Data Science Undergraduate
+          </h2>
 
 
-            <div class="hero-actions">
-
-              <a
-                href="#projects"
-                class="button button-dark">
-
-                See my projects
-
-              </a>
-
-              <a
-                href="mailto:syaqillanajwa25@gmail.com"
-                class="button button-turquoise">
-
-                Say hello
-
-              </a>
-
-            </div>
+          <p class="hero-description">
+            I'm a Data Science undergraduate at BINUS University
+            with a growing interest in Data Analytics and Machine Learning.
+            I enjoy exploring data, testing different approaches,
+            and understanding why a result behaves the way it does.
+          </p>
 
 
-            <div class="hero-note">
-              still figuring out what I enjoy most
-            </div>
+          <div class="availability">
+
+            <span class="availability-dot"></span>
+
+            Open to internship opportunities
 
           </div>
 
 
-          <div class="profile-wrap">
+          <div class="hero-buttons">
 
-            <div class="profile-back"></div>
+            <a
+              href="#projects"
+              class="button button-primary"
+            >
+              View Projects
+            </a>
 
-            <div class="profile-card">
+            <a
+              href="mailto:syaqillanajwa25@gmail.com"
+              class="button button-secondary"
+            >
+              Contact Me
+            </a>
 
-              <img
-                src="assets/me.png"
-                alt="Syaqila Najwa Amalia Hambali">
+          </div>
 
-            </div>
 
-            <div class="profile-location">
-              Jakarta, Indonesia
-            </div>
+          <div class="hero-social">
+
+            <a
+              href="https://www.linkedin.com/in/syaqilanajwa/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn ↗
+            </a>
+
+            <a
+              href="https://github.com/syaqillanajwa25-ops"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub ↗
+            </a>
 
           </div>
 
         </div>
 
 
-        <div class="hero-bottom">
+        <div class="hero-photo hidden-anim">
 
-          <span>Data Science</span>
-          <span>Machine Learning</span>
-          <span>Data Analytics</span>
-          <span>Deep Learning</span>
-          <span>Computer Vision</span>
-          <span>MLOps</span>
+          <div class="photo-back"></div>
+
+          <div class="photo-frame">
+
+            <img
+              src="assets/me.png"
+              alt="Syaqila Najwa Amalia Hambali"
+            >
+
+          </div>
+
+          <p class="photo-caption">
+            Jakarta, Indonesia
+          </p>
 
         </div>
 
@@ -2493,126 +301,116 @@
 
     <!-- ABOUT -->
 
-    <section class="about" id="about">
+    <section
+      class="section"
+      id="about"
+    >
 
       <div class="container">
 
-        <div class="section-label">
-          <span>01</span> / About me
+        <div class="section-heading hidden-anim">
+
+          <p class="section-number">
+            01 / About
+          </p>
+
+          <h2>
+            A little about me.
+          </h2>
+
         </div>
 
 
         <div class="about-grid">
 
-          <div class="about-left">
+          <div class="about-copy hidden-anim">
 
-            <h2>
-              I usually learn
-              by trying.
-            </h2>
-
-            <p class="about-side-note">
-              Especially when I don’t understand something yet.
+            <p>
+              I started Data Science because I was interested in technology,
+              without having one specific role in mind.
+              After working with different datasets, models, and projects,
+              I found that I really enjoy analyzing results
+              and understanding why something works the way it does.
             </p>
 
+            <p>
+              I usually learn by trying things myself first.
+              When something doesn't make sense,
+              I experiment, read, and compare different approaches
+              until I understand it better.
+            </p>
 
-            <div class="about-sticky">
-              curiosity usually turns into another tab being opened
-            </div>
+            <p class="about-personal">
+              Outside class, I usually spend my time reading,
+              listening to music, following F1, or baking.
+            </p>
 
           </div>
 
 
-          <div class="about-right">
+          <div class="about-info hidden-anim">
 
-            <p>
-              I didn’t start Data Science with a specific role in mind.
-              I just knew I was interested in technology.
-              After a few semesters of working with different datasets,
-              models, and projects, I realized that I actually enjoy
-              the process of analyzing data, comparing results,
-              and figuring out why something works the way it does.
-            </p>
+            <div class="info-row">
 
-            <p>
-              I’m also pretty independent when I learn.
-              If something doesn’t make sense,
-              I’ll usually try it myself first,
-              look around for answers,
-              and keep experimenting until I understand it better.
-            </p>
+              <span>
+                Current focus
+              </span>
+
+              <strong>
+                Data Analytics & Machine Learning
+              </strong>
+
+            </div>
 
 
-            <div class="facts-layout">
+            <div class="info-row">
+
+              <span>
+                University
+              </span>
+
+              <strong>
+                BINUS University
+              </strong>
+
+            </div>
 
 
-              <div class="fact-main">
+            <div class="info-row">
 
-                <div>
+              <span>
+                Major
+              </span>
 
-                  <small>
-                    Current focus
-                  </small>
+              <strong>
+                Data Science
+              </strong>
 
-                  <strong>
-                    Data Analytics
-                    + Machine Learning
-                  </strong>
-
-                </div>
-
-                <p>
-                  These are the two areas I’m most interested in right now.
-                  I’m still keeping my options open while I learn
-                  what kind of work I enjoy most in a real working environment.
-                </p>
-
-              </div>
+            </div>
 
 
-              <div class="fact-stack">
+            <div class="info-row">
+
+              <span>
+                Languages
+              </span>
+
+              <strong>
+                Indonesian · English
+              </strong>
+
+            </div>
 
 
-                <div class="fact-side languages">
+            <div class="info-row">
 
-                  <small>
-                    Languages
-                  </small>
+              <span>
+                Location
+              </span>
 
-                  <strong>
-                    Indonesian
-                  </strong>
-
-                  <p>
-                    Native
-                  </p>
-
-                  <strong style="display:block; margin-top:10px;">
-                    English
-                  </strong>
-
-                  <p>
-                    Intermediate
-                  </p>
-
-                </div>
-
-
-                <div class="fact-side personal">
-
-                  <small>
-                    Outside college
-                  </small>
-
-                  <strong>
-                    Novels, comics,
-                    music, F1 & baking
-                  </strong>
-
-                </div>
-
-
-              </div>
+              <strong>
+                Jakarta, Indonesia
+              </strong>
 
             </div>
 
@@ -2627,129 +425,125 @@
 
     <!-- SKILLS -->
 
-    <section id="skills">
+    <section
+      class="section section-alt"
+      id="skills"
+    >
 
       <div class="container">
 
-        <div class="section-label">
-          <span>02</span> / Skills & tools
-        </div>
+        <div class="section-heading hidden-anim">
 
-
-        <div class="skills-heading">
+          <p class="section-number">
+            02 / Skills
+          </p>
 
           <h2>
-            My usual
-            toolbox.
+            Tools I've worked with.
           </h2>
 
           <p>
-            Most of these are tools I picked up because
-            I actually needed them for a project,
-            assignment, or experiment.
+            Most of these came from university projects,
+            assignments, and experiments I've worked on.
           </p>
 
         </div>
 
 
-        <div class="skills-bento">
+        <div class="skills-grid">
 
+          <article
+            class="skill-card hidden-anim skills-content"
+          >
 
-          <div class="skill-card skill-data">
-
-            <div class="skill-number">
+            <p class="skill-label">
               01
-            </div>
+            </p>
 
             <h3>
               Data & Machine Learning
             </h3>
 
-            <p>
-              Python, SQL, R, Pandas, NumPy,
-              Scikit-learn, XGBoost,
-              EDA and Feature Engineering.
-            </p>
 
-          </div>
+            <div class="skills-list">
 
+              <span class="skill-item">Python</span>
+              <span class="skill-item">SQL</span>
+              <span class="skill-item">R</span>
+              <span class="skill-item">Pandas</span>
+              <span class="skill-item">NumPy</span>
+              <span class="skill-item">Scikit-learn</span>
+              <span class="skill-item">XGBoost</span>
+              <span class="skill-item">Data Analysis</span>
+              <span class="skill-item">Feature Engineering</span>
 
-          <div class="skill-card skill-deep">
-
-            <div class="skill-number">
-              02
             </div>
+
+          </article>
+
+
+          <article
+            class="skill-card hidden-anim skills-content"
+          >
+
+            <p class="skill-label">
+              02
+            </p>
 
             <h3>
               Deep Learning
             </h3>
 
-            <p>
-              TensorFlow, Keras, CNN, LSTM,
-              Transfer Learning, Autoencoder and GAN.
-            </p>
 
-          </div>
+            <div class="skills-list">
+
+              <span class="skill-item">TensorFlow</span>
+              <span class="skill-item">Keras</span>
+              <span class="skill-item">CNN</span>
+              <span class="skill-item">LSTM</span>
+              <span class="skill-item">Transfer Learning</span>
+              <span class="skill-item">Computer Vision</span>
+              <span class="skill-item">Autoencoder</span>
+              <span class="skill-item">GAN</span>
+
+            </div>
+
+          </article>
 
 
-          <div class="skill-card skill-cloud">
+          <article
+            class="skill-card hidden-anim skills-content"
+          >
 
-            <div class="skill-number">
+            <p class="skill-label">
               03
-            </div>
-
-            <h3>
-              Cloud & MLOps
-            </h3>
-
-            <p>
-              AWS SageMaker, S3, EC2,
-              Boto3, MLflow, Optuna and Docker.
             </p>
 
-          </div>
-
-
-          <div class="skill-card skill-dev">
-
-            <div class="skill-number">
-              04
-            </div>
-
             <h3>
-              Development & Tools
+              Deployment & Development
             </h3>
 
-            <p>
-              FastAPI, Streamlit, Git, GitHub,
-              Jupyter Notebook, HTML, CSS,
-              JavaScript and Figma.
-            </p>
 
-          </div>
+            <div class="skills-list">
 
-        </div>
+              <span class="skill-item">AWS SageMaker</span>
+              <span class="skill-item">S3</span>
+              <span class="skill-item">EC2</span>
+              <span class="skill-item">Boto3</span>
+              <span class="skill-item">MLflow</span>
+              <span class="skill-item">Optuna</span>
+              <span class="skill-item">FastAPI</span>
+              <span class="skill-item">Streamlit</span>
+              <span class="skill-item">Docker</span>
+              <span class="skill-item">Git</span>
+              <span class="skill-item">GitHub</span>
+              <span class="skill-item">HTML</span>
+              <span class="skill-item">CSS</span>
+              <span class="skill-item">JavaScript</span>
 
+            </div>
 
-        <div class="education">
-
-          <div>
-
-            <strong>
-              Bina Nusantara University
-            </strong>
-
-            <br>
-
-            <span>
-              Bachelor of Computer Science · Data Science
-            </span>
-
-          </div>
-
-          <span>
-            2024 — Present · Jakarta
-          </span>
+          </article>
 
         </div>
 
@@ -2760,449 +554,317 @@
 
     <!-- PROJECTS -->
 
-    <section class="projects" id="projects">
+    <section
+      class="section"
+      id="projects"
+    >
 
       <div class="container">
 
-        <div class="section-label">
-          <span>03</span> / Projects
-        </div>
+        <div class="section-heading hidden-anim">
 
-
-        <div class="projects-heading">
+          <p class="section-number">
+            03 / Projects
+          </p>
 
           <h2>
-            Things I’ve tried,
-            fixed & learned from.
+            Selected projects.
           </h2>
 
           <p>
-            Most of these started as university projects.
-            Each one gave me something different to figure out,
-            from choosing a model to deployment and frontend work.
+            A selection of projects covering machine learning,
+            deep learning, deployment, time-series forecasting,
+            and frontend development.
           </p>
 
         </div>
 
 
-        <!-- CREDIT SCORE -->
+        <!-- FEATURED PROJECT -->
 
-        <article class="featured-project">
+        <article class="featured-project hidden-anim">
 
-          <div class="featured-inner">
+          <div class="featured-content">
 
-            <div class="project-copy">
+            <p class="project-type">
+              Featured Project · Machine Learning / AWS
+            </p>
 
-              <div class="project-index">
-                01 · Machine Learning / AWS
-              </div>
+            <h3>
+              Credit Score Prediction
+              & Cloud Deployment
+            </h3>
 
+            <p>
+              Developed an end-to-end multiclass credit score
+              classification project covering preprocessing,
+              model comparison, experiment tracking,
+              evaluation, and cloud deployment.
+            </p>
 
-              <h3>
-                Credit Score Prediction
-                & Cloud Deployment
-              </h3>
-
-
-              <p>
-                I compared several classification models,
-                tracked the experiments with MLflow,
-                selected Extra Trees as the final model,
-                and deployed it through AWS SageMaker
-                with a Streamlit interface.
-              </p>
-
-
-              <div class="metric">
-                Extra Trees · 73.98% Accuracy · 0.740 Weighted F1
-              </div>
+            <p>
+              Logistic Regression, Decision Tree,
+              Random Forest, and Extra Trees were compared,
+              with Extra Trees selected as the final model.
+            </p>
 
 
-              <div class="tags">
-
-                <span>Python</span>
-                <span>Scikit-learn</span>
-                <span>MLflow</span>
-                <span>Streamlit</span>
-                <span>AWS SageMaker</span>
-                <span>Boto3</span>
-
-              </div>
+            <div class="project-result">
+              73.98% Accuracy · 0.740 Weighted F1
+            </div>
 
 
-              <a
-                href="https://github.com/syaqillanajwa25-ops/credit-score-aws-deployment"
-                target="_blank"
-                class="project-link">
+            <div class="project-tech">
 
-                View GitHub repository →
-
-              </a>
+              <span>Python</span>
+              <span>Scikit-learn</span>
+              <span>MLflow</span>
+              <span>AWS SageMaker</span>
+              <span>Streamlit</span>
+              <span>Boto3</span>
 
             </div>
 
 
-            <div class="credit-images">
+            <a
+              href="https://github.com/syaqillanajwa25-ops/credit-score-aws-deployment"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              View repository ↗
+            </a>
 
-              <div class="visual-note">
-                end-to-end project
-              </div>
+          </div>
 
-              <img
-                src="assets/projects/credit-score a.png"
-                alt="Credit Score project">
 
-              <img
-                src="assets/projects/credit-score b.png"
-                alt="Credit Score project">
+          <div class="featured-image">
 
-            </div>
+            <img
+              src="assets/projects/credit-score a.png"
+              alt="Credit Score Prediction project interface"
+            >
 
           </div>
 
         </article>
 
 
-        <!-- DISASTER -->
+        <div class="projects-grid">
 
-        <article class="project-story">
+          <!-- DISASTER -->
 
-          <div class="story-visual blue">
+          <article class="project-card hidden-anim">
 
-            <div class="visual-note">
-              group project
-            </div>
+            <div>
 
-            <img
-              src="assets/projects/disaster.png"
-              alt="Disaster Image Classification">
+              <p class="project-type">
+                Computer Vision
+              </p>
 
-          </div>
+              <h3>
+                Disaster Image Classification
+              </h3>
+
+              <p>
+                Compared a CNN built from scratch
+                with EfficientNetB0 transfer learning
+                for four-class disaster image classification.
+              </p>
+
+              <p class="project-result">
+                81.63% Accuracy · 0.7939 Macro F1
+              </p>
 
 
-          <div class="story-copy">
+              <div class="project-tech">
 
-            <div class="project-index">
-              02 · Computer Vision
-            </div>
+                <span>TensorFlow</span>
+                <span>Keras</span>
+                <span>CNN</span>
+                <span>EfficientNetB0</span>
 
-            <h3>
-              Disaster Image Classification
-            </h3>
-
-            <p>
-              A four-class image classification project
-              comparing a CNN built from scratch
-              with EfficientNetB0 transfer learning.
-            </p>
-
-            <div class="metric">
-              EfficientNetB0 · 81.63% Accuracy · 0.7939 Macro F1
-            </div>
-
-            <div class="tags">
-
-              <span>TensorFlow</span>
-              <span>Keras</span>
-              <span>CNN</span>
-              <span>EfficientNetB0</span>
+              </div>
 
             </div>
+
 
             <a
               href="https://github.com/syaqillanajwa25-ops/disaster-image-classification"
               target="_blank"
-              class="project-link">
-
-              View project →
-
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              GitHub ↗
             </a>
 
-          </div>
-
-        </article>
+          </article>
 
 
-        <!-- PLACEMENT -->
+          <!-- PLACEMENT -->
 
-        <article class="project-story reverse">
+          <article class="project-card hidden-anim">
 
-          <div class="story-visual turquoise">
+            <div>
 
-            <div class="placement-ui">
+              <p class="project-type">
+                Machine Learning Application
+              </p>
 
-              <div class="placement-title">
+              <h3>
+                Student Placement & Salary Prediction
+              </h3>
 
-                <div class="placement-label">
-                  Prediction result
-                </div>
-
-                <div class="placement-dot"></div>
-
-              </div>
-
-
-              <div class="placement-result">
-
-                <small>
-                  Placement status
-                </small>
-
-                <strong>
-                  Placed
-                </strong>
-
-              </div>
+              <p>
+                Built an application with two prediction tasks:
+                student placement classification
+                and salary estimation.
+              </p>
 
 
-              <div class="placement-result salary">
+              <div class="project-tech">
 
-                <small>
-                  Estimated salary
-                </small>
-
-                <strong>
-                  10.12 LPA
-                </strong>
+                <span>Random Forest</span>
+                <span>Optuna</span>
+                <span>MLflow</span>
+                <span>FastAPI</span>
+                <span>Streamlit</span>
 
               </div>
 
             </div>
 
-          </div>
-
-
-          <div class="story-copy">
-
-            <div class="project-index">
-              03 · Machine Learning Application
-            </div>
-
-            <h3>
-              Student Placement
-              & Salary Prediction
-            </h3>
-
-            <p>
-              I built one application with two outputs:
-              a classification model for placement status
-              and a regression model for salary estimation.
-            </p>
-
-            <div class="tags">
-
-              <span>Random Forest</span>
-              <span>Optuna</span>
-              <span>MLflow</span>
-              <span>FastAPI</span>
-              <span>Streamlit</span>
-
-            </div>
 
             <a
               href="https://github.com/syaqillanajwa25-ops/student-placement-salary-prediction"
               target="_blank"
-              class="project-link">
-
-              View project →
-
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              GitHub ↗
             </a>
 
-          </div>
-
-        </article>
+          </article>
 
 
-        <!-- STOCK -->
+          <!-- STOCK -->
 
-        <article class="project-story">
+          <article class="project-card hidden-anim">
 
-          <div class="story-visual green">
+            <div>
 
-            <div class="visual-note">
-              individual project
-            </div>
+              <p class="project-type">
+                Time Series
+              </p>
 
-            <img
-              src="assets/projects/stock-lstm.png"
-              alt="Stock Time-Series Prediction">
+              <h3>
+                Stock Time-Series Prediction with LSTM
+              </h3>
 
-          </div>
+              <p>
+                Built LSTM models using historical
+                FB and IBM closing prices
+                for time-series forecasting.
+              </p>
+
+              <p class="project-result">
+                FB RMSE 4.06 · IBM RMSE 2.65
+              </p>
 
 
-          <div class="story-copy">
+              <div class="project-tech">
 
-            <div class="project-index">
-              04 · Time Series
-            </div>
+                <span>Python</span>
+                <span>TensorFlow</span>
+                <span>Keras</span>
+                <span>LSTM</span>
 
-            <h3>
-              Stock Time-Series
-              Prediction with LSTM
-            </h3>
-
-            <p>
-              I used historical FB and IBM closing prices
-              to build and evaluate LSTM models
-              for time-series forecasting.
-            </p>
-
-            <div class="metric">
-              FB RMSE 4.06 · IBM RMSE 2.65
-            </div>
-
-            <div class="tags">
-
-              <span>Python</span>
-              <span>TensorFlow</span>
-              <span>Keras</span>
-              <span>LSTM</span>
+              </div>
 
             </div>
+
 
             <a
               href="https://github.com/syaqillanajwa25-ops/stock-time-series-lstm"
               target="_blank"
-              class="project-link">
-
-              View project →
-
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              GitHub ↗
             </a>
 
-          </div>
-
-        </article>
+          </article>
 
 
-        <!-- GAN -->
+          <!-- GAN -->
 
-        <article class="project-story reverse">
+          <article class="project-card hidden-anim">
 
-          <div class="story-visual pink">
+            <div>
 
-            <div class="gan-layout">
+              <p class="project-type">
+                Generative Deep Learning
+              </p>
 
-              <div class="gan-card">
-                Generator
-              </div>
+              <h3>
+                Image Generation with GAN
+              </h3>
 
-              <div class="gan-caption">
-                learning against
-              </div>
+              <p>
+                Explored adversarial training
+                by building Generator and Discriminator networks
+                for synthetic image generation.
+              </p>
 
-              <div class="gan-card bottom">
-                Discriminator
+
+              <div class="project-tech">
+
+                <span>Python</span>
+                <span>TensorFlow</span>
+                <span>Keras</span>
+                <span>GAN</span>
+
               </div>
 
             </div>
 
-          </div>
-
-
-          <div class="story-copy">
-
-            <div class="project-index">
-              05 · Generative Deep Learning
-            </div>
-
-            <h3>
-              Image Generation
-              with GAN
-            </h3>
-
-            <p>
-              This project was my introduction to GANs
-              and how a Generator and Discriminator
-              learn by competing against each other
-              during training.
-            </p>
-
-            <div class="tags">
-
-              <span>Python</span>
-              <span>TensorFlow</span>
-              <span>Keras</span>
-              <span>GAN</span>
-
-            </div>
 
             <a
               href="https://github.com/syaqillanajwa25-ops/image-generation-gan"
               target="_blank"
-              class="project-link">
-
-              View project →
-
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              GitHub ↗
             </a>
 
-          </div>
-
-        </article>
+          </article>
 
 
-        <!-- CLASH -->
+          <!-- CLASH -->
 
-        <article class="clash-project">
-
-          <div class="clash-gallery">
-
-            <div class="clash-main">
-
-              <img
-                src="assets/projects/clash-of-bang.png"
-                alt="Clash of BaNG Home">
-
-            </div>
-
-
-            <div class="clash-side">
-
-              <img
-                src="assets/projects/clash-of-bang gallery.png"
-                alt="Clash of BaNG Gallery">
-
-              <img
-                src="assets/projects/clash-of-bang troops.png"
-                alt="Clash of BaNG Troops">
-
-              <img
-                src="assets/projects/clash-of-bang about.png"
-                alt="Clash of BaNG About">
-
-              <img
-                src="assets/projects/clash-of-bang register.png"
-                alt="Clash of BaNG Register">
-
-            </div>
-
-          </div>
-
-
-          <div class="clash-copy">
+          <article class="project-card hidden-anim">
 
             <div>
 
-              <div class="project-index">
-                06 · HCI / Frontend
-              </div>
+              <p class="project-type">
+                HCI · Frontend
+              </p>
 
               <h3>
                 Clash of BaNG
               </h3>
 
-            </div>
-
-
-            <div>
-
               <p>
-                An individual HCI project that started as a Figma prototype
-                and became a responsive five-page website.
-                I worked on the layout, search and filtering,
-                animations, navigation, and JavaScript form validation.
+                Designed a Figma prototype
+                and developed it into a responsive
+                five-page community website
+                with filtering, animations,
+                navigation, and form validation.
               </p>
 
-              <div class="tags">
+
+              <div class="project-tech">
 
                 <span>HTML</span>
                 <span>CSS</span>
@@ -3211,32 +873,56 @@
 
               </div>
 
-              <a
-                href="https://github.com/syaqillanajwa25-ops/clash-of-bang-website"
-                target="_blank"
-                class="project-link">
+            </div>
 
-                View project →
 
-              </a>
+            <a
+              href="https://github.com/syaqillanajwa25-ops/clash-of-bang-website"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              GitHub ↗
+            </a>
+
+          </article>
+
+
+          <!-- MORE -->
+
+          <article class="project-card project-more hidden-anim">
+
+            <div>
+
+              <p class="project-type">
+                More Projects
+              </p>
+
+              <h3>
+                More experiments on GitHub.
+              </h3>
+
+              <p>
+                Other projects include Autoencoder,
+                Heart Disease Prediction,
+                Student Burnout Prediction,
+                Used Car Price Prediction,
+                and several other university projects.
+              </p>
 
             </div>
 
-          </div>
 
-        </article>
+            <a
+              href="https://github.com/syaqillanajwa25-ops?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              View all repositories ↗
+            </a>
 
-
-        <div class="all-projects">
-
-          <a
-            href="https://github.com/syaqillanajwa25-ops?tab=repositories"
-            target="_blank"
-            class="button button-dark">
-
-            See all GitHub projects
-
-          </a>
+          </article>
 
         </div>
 
@@ -3247,300 +933,126 @@
 
     <!-- EXPERIENCE -->
 
-    <section id="experience">
+    <section
+      class="section section-alt"
+      id="experience"
+    >
 
       <div class="container">
 
-        <div class="section-label">
-          <span>04</span> / Organizations & volunteering
-        </div>
+        <div class="section-heading hidden-anim">
 
-
-        <div class="experience-heading">
+          <p class="section-number">
+            04 / Experience
+          </p>
 
           <h2>
-            Not everything
-            I learned came
-            from code.
+            Organizations & volunteering.
           </h2>
 
           <p>
-            Organizations and volunteering gave me a different kind
-            of experience: working with people, coordinating things,
-            communicating clearly, and adjusting when plans changed.
+            Experiences outside class that helped me
+            improve communication, teamwork,
+            coordination, and responsibility.
           </p>
 
         </div>
 
 
-        <div class="experience-list">
+        <div class="timeline">
 
+          <article class="timeline-item hidden-anim">
 
-          <!-- BVOICE -->
+            <span class="timeline-date">
+              2024 — Present
+            </span>
 
-          <article class="experience-row">
+            <h3>
+              BINUS BVoice
+            </h3>
 
-            <div class="experience-number">
-              01
-            </div>
+            <p class="timeline-role">
+              Staff Operator · P3K Coordinator · P3K Mentor
+            </p>
 
-
-            <div class="experience-copy">
-
-              <div class="experience-title">
-
-                <img
-                  src="assets/logo_bvoice-removebg-preview.png"
-                  class="experience-logo"
-                  alt="BINUS BVoice">
-
-                <div>
-
-                  <h3>
-                    BINUS BVoice
-                  </h3>
-
-                  <div class="role">
-                    Staff Operator · P3K Coordinator · P3K Mentor
-                  </div>
-
-                  <div class="date">
-                    2024 — Present
-                  </div>
-
-                </div>
-
-              </div>
-
-
-              <p>
-                I started as a Staff Operator,
-                working behind the scenes during live broadcasts
-                and managing microphones, audio levels,
-                music, and broadcast flow.
-              </p>
-
-              <p>
-                Later, I became P3K Coordinator
-                for PPTC, Expo, Training, Seminar,
-                and Training Camp.
-              </p>
-
-              <p>
-                I now continue as a mentor,
-                helping the next coordinator and team
-                with planning, presentations, and preparation.
-              </p>
-
-            </div>
-
-
-            <div class="experience-images">
-
-              <img
-                src="assets/expo bvoice.png"
-                alt="BVoice Expo">
-
-              <img
-                src="assets/seminar bvoice.png"
-                alt="BVoice Seminar">
-
-            </div>
+            <p>
+              Started behind the scenes during live broadcasts,
+              later coordinated five P3K programs,
+              and now support the next coordinator
+              and team as a mentor.
+            </p>
 
           </article>
 
 
-          <!-- KSF -->
+          <article class="timeline-item hidden-anim">
 
-          <article class="experience-row reverse">
+            <span class="timeline-date">
+              October 2025
+            </span>
 
-            <div class="experience-number">
-              02
-            </div>
+            <h3>
+              BINUS Kemanggisan Sport-Fest
+            </h3>
 
+            <p class="timeline-role">
+              Public Relations Committee
+            </p>
 
-            <div class="experience-images one">
-
-              <img
-                src="assets/ksf.png"
-                alt="BINUS Kemanggisan Sport-Fest">
-
-            </div>
-
-
-            <div class="experience-copy">
-
-              <div class="experience-title">
-
-                <div class="experience-badge">
-                  KSF
-                </div>
-
-                <div>
-
-                  <h3>
-                    BINUS Kemanggisan Sport-Fest
-                  </h3>
-
-                  <div class="role">
-                    Public Relations Committee
-                  </div>
-
-                  <div class="date">
-                    October 2025
-                  </div>
-
-                </div>
-
-              </div>
-
-
-              <p>
-                I joined the PR team for a campus sports event
-                covering five different sports categories.
-              </p>
-
-              <p>
-                My role focused on communication
-                between the committee, sports PICs,
-                and participants, including during registration
-                and the event itself.
-              </p>
-
-            </div>
+            <p>
+              Supported communication between
+              the committee, sports PICs,
+              and participants during registration
+              and the event.
+            </p>
 
           </article>
 
 
-          <!-- TFI -->
+          <article class="timeline-item hidden-anim">
 
-          <article class="experience-row">
+            <span class="timeline-date">
+              December 2025
+            </span>
 
-            <div class="experience-number">
-              03
-            </div>
+            <h3>
+              Teach For Indonesia
+            </h3>
 
+            <p class="timeline-role">
+              Teaching Volunteer
+            </p>
 
-            <div class="experience-copy">
-
-              <div class="experience-title">
-
-                <div class="experience-badge">
-                  TFI
-                </div>
-
-                <div>
-
-                  <h3>
-                    Teach For Indonesia
-                  </h3>
-
-                  <div class="role">
-                    Teaching Volunteer
-                  </div>
-
-                  <div class="date">
-                    December 2025
-                  </div>
-
-                </div>
-
-              </div>
-
-
-              <p>
-                My team and I spent five sessions
-                teaching children at PAUD Umi in West Jakarta.
-              </p>
-
-              <p>
-                Each meeting had a different learning theme,
-                and we took turns leading activities
-                and accompanying the children throughout the session.
-              </p>
-
-              <p>
-                It taught me to be more patient
-                and to adjust the way I explain something
-                depending on who I’m talking to.
-              </p>
-
-            </div>
-
-
-            <div class="experience-images">
-
-              <img
-                src="assets/tfi a.png"
-                alt="Teach For Indonesia">
-
-              <img
-                src="assets/tfi b.png"
-                alt="Teach For Indonesia">
-
-            </div>
+            <p>
+              Joined a five-session teaching program
+              at PAUD Umi in West Jakarta
+              and helped prepare and lead
+              different learning activities.
+            </p>
 
           </article>
 
 
-          <!-- ICOBAR -->
+          <article class="timeline-item hidden-anim">
 
-          <article class="experience-row reverse">
+            <span class="timeline-date">
+              February 2026
+            </span>
 
-            <div class="experience-number">
-              04
-            </div>
+            <h3>
+              ICOBAR & SMART
+            </h3>
 
+            <p class="timeline-role">
+              Program Committee
+            </p>
 
-            <div class="experience-images one">
-
-              <img
-                src="assets/icobar.png"
-                alt="ICOBAR and SMART">
-
-            </div>
-
-
-            <div class="experience-copy">
-
-              <div class="experience-title">
-
-                <div class="experience-badge">
-                  IC
-                </div>
-
-                <div>
-
-                  <h3>
-                    ICOBAR & SMART
-                  </h3>
-
-                  <div class="role">
-                    Program Committee
-                  </div>
-
-                  <div class="date">
-                    February 2026
-                  </div>
-
-                </div>
-
-              </div>
-
-
-              <p>
-                I helped accompany keynote speakers
-                and VIP guests throughout the conference.
-              </p>
-
-              <p>
-                I coordinated with other committee teams,
-                helped guests move between scheduled activities,
-                and communicated directly
-                in both Indonesian and English.
-              </p>
-
-            </div>
+            <p>
+              Accompanied keynote speakers and VIP guests,
+              coordinated with other committee teams,
+              and communicated with guests
+              in Indonesian and English.
+            </p>
 
           </article>
 
@@ -3551,282 +1063,136 @@
     </section>
 
 
-    <!-- HOBBIES -->
+    <!-- EDUCATION -->
 
-    <section class="off-duty">
-
-      <div class="container off-grid">
-
-        <div class="off-copy">
-
-          <small>
-            When I’m not studying
-          </small>
-
-          <h2>
-            A few things
-            I always come
-            back to.
-          </h2>
-
-          <p>
-            I’m usually reading something,
-            listening to music,
-            following an F1 race weekend,
-            or baking when I have the time.
-          </p>
-
-        </div>
-
-
-        <div class="hobby-board">
-
-
-          <div class="hobby-item">
-
-            <small>
-              Reading
-            </small>
-
-            <strong>
-              Novels
-            </strong>
-
-          </div>
-
-
-          <div class="hobby-item">
-
-            <small>
-              Reading
-            </small>
-
-            <strong>
-              Comics
-            </strong>
-
-          </div>
-
-
-          <div class="hobby-item">
-
-            <small>
-              Usually playing
-            </small>
-
-            <strong>
-              Music
-            </strong>
-
-          </div>
-
-
-          <div class="hobby-item">
-
-            <small>
-              Race weekend
-            </small>
-
-            <strong>
-              F1 & Motorsport
-            </strong>
-
-          </div>
-
-
-          <div class="hobby-item">
-
-            <small>
-              When I have time
-            </small>
-
-            <strong>
-              Baking
-            </strong>
-
-          </div>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-
-    <section>
+    <section
+      class="section"
+      id="education"
+    >
 
       <div class="container">
 
-        <div class="contact-box">
+        <div class="section-heading hidden-anim">
+
+          <p class="section-number">
+            05 / Education
+          </p>
+
+          <h2>
+            Education.
+          </h2>
+
+        </div>
+
+
+        <div class="education-card hidden-anim">
 
           <div>
 
-            <small>
-              Let’s connect
-            </small>
-
-            <h2>
-              Say hi.
-            </h2>
-
-          </div>
-
-
-          <div class="contact-right">
+            <h3>
+              Bachelor of Computer Science
+            </h3>
 
             <p>
-              I’m currently looking for internship opportunities
-              and always happy to connect.
+              Data Science · BINUS University
             </p>
 
-            <a
-              href="mailto:syaqillanajwa25@gmail.com">
-
-              syaqillanajwa25@gmail.com
-
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/syaqilanajwa/"
-              target="_blank">
-
-              LinkedIn
-
-            </a>
-
-            <a
-              href="https://github.com/syaqillanajwa25-ops"
-              target="_blank">
-
-              GitHub
-
-            </a>
-
           </div>
+
+          <span>
+            2024 — 2028
+          </span>
 
         </div>
 
       </div>
 
     </section>
-
 
   </main>
 
 
-  <!-- FOOTER -->
+  <!-- CONTACT -->
 
-  <footer>
+  <footer
+    class="footer"
+    id="contact"
+  >
 
-    <div class="container footer-inner">
+    <div class="container">
 
-      <span>
-        Syaqila Najwa Amalia Hambali
-      </span>
+      <div class="footer-main hidden-anim">
 
-      <span>
-        Data Science · 2026
-      </span>
+        <div>
+
+          <p class="footer-label">
+            06 / Contact
+          </p>
+
+          <h2>
+            Let's connect.
+          </h2>
+
+          <p>
+            I'm currently looking for internship opportunities
+            and always happy to connect.
+          </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+          <a
+            href="mailto:syaqillanajwa25@gmail.com"
+          >
+            Email ↗
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/syaqilanajwa/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn ↗
+          </a>
+
+          <a
+            href="https://github.com/syaqillanajwa25-ops"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub ↗
+          </a>
+
+          <a
+            href="https://www.instagram.com/syana.qn/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram ↗
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          Syaqila Najwa Amalia Hambali
+        </span>
+
+        <span>
+          Data Science · 2026
+        </span>
+
+      </div>
 
     </div>
 
   </footer>
-
-
-  <script>
-
-    const menuButton =
-      document.getElementById("menuButton");
-
-    const mobileMenu =
-      document.getElementById("mobileMenu");
-
-    const menuLinks =
-      mobileMenu.querySelectorAll("a");
-
-
-    function closeMenu() {
-
-      menuButton.classList.remove("active");
-
-      mobileMenu.classList.remove("active");
-
-      document.body.classList.remove("menu-open");
-
-      menuButton.setAttribute(
-        "aria-expanded",
-        "false"
-      );
-
-    }
-
-
-    menuButton.addEventListener(
-      "click",
-      function () {
-
-        const open =
-          mobileMenu.classList.toggle("active");
-
-        menuButton.classList.toggle(
-          "active",
-          open
-        );
-
-        document.body.classList.toggle(
-          "menu-open",
-          open
-        );
-
-        menuButton.setAttribute(
-          "aria-expanded",
-          open ? "true" : "false"
-        );
-
-      }
-    );
-
-
-    menuLinks.forEach(
-      function (link) {
-
-        link.addEventListener(
-          "click",
-          closeMenu
-        );
-
-      }
-    );
-
-
-    window.addEventListener(
-      "resize",
-      function () {
-
-        if (window.innerWidth > 720) {
-          closeMenu();
-        }
-
-      }
-    );
-
-
-    document.addEventListener(
-      "keydown",
-      function (event) {
-
-        if (event.key === "Escape") {
-          closeMenu();
-        }
-
-      }
-    );
-
-  </script>
-
 
 </body>
 
