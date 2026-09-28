@@ -19,7 +19,6 @@
   >
 
   <!-- Social Preview -->
-
   <meta
     property="og:title"
     content="Syaqila Najwa Amalia Hambali — Data Science Portfolio"
@@ -27,7 +26,7 @@
 
   <meta
     property="og:description"
-    content="Selected projects in Data Science, Machine Learning, Deep Learning, Data Analytics, model deployment, and development."
+    content="Selected projects in Data Science, Machine Learning, Deep Learning, Data Analytics, and model deployment."
   >
 
   <meta
@@ -67,7 +66,7 @@
 
   <meta
     name="twitter:description"
-    content="Selected projects in Data Science, Machine Learning, Deep Learning, Data Analytics, model deployment, and development."
+    content="Selected projects in Data Science, Machine Learning, Deep Learning, Data Analytics, and model deployment."
   >
 
   <meta
@@ -80,98 +79,84 @@
     href="style.css"
   >
 
-  <script src="script.js"></script>
+  <script
+    src="script.js"
+    defer
+  ></script>
 </head>
 
 
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- ==============================
+       NAVBAR
+       ============================== -->
 
   <header
     class="header"
     id="header"
   >
 
-    <nav class="nav container">
+    <div class="nav container">
 
       <a
         href="#home"
-        class="nav-logo"
+        class="brand"
       >
-        Syaqila<span>.</span>
+        SQ<span>/</span>DS
       </a>
 
 
-      <div
+      <nav
         class="nav-menu"
         id="navMenu"
+        aria-label="Main navigation"
       >
 
-        <a
-          href="#home"
-          class="nav-link active"
-        >
-          Home
-        </a>
-
-        <a
-          href="#about"
-          class="nav-link"
-        >
+        <a href="#about" class="nav-link">
           About
         </a>
 
-        <a
-          href="#skills"
-          class="nav-link"
-        >
+        <a href="#skills" class="nav-link">
           Skills
         </a>
 
-        <a
-          href="#projects"
-          class="nav-link"
-        >
+        <a href="#projects" class="nav-link">
           Projects
         </a>
 
-        <a
-          href="#experience"
-          class="nav-link"
-        >
+        <a href="#experience" class="nav-link">
           Experience
         </a>
 
-        <a
-          href="#contact"
-          class="nav-link"
-        >
+        <a href="#contact" class="nav-link">
           Contact
         </a>
 
-      </div>
+      </nav>
 
 
       <div class="nav-actions">
 
+        <span class="nav-code">
+          JKT / 2026
+        </span>
+
         <button
           class="theme-toggle"
           id="themeToggle"
-          type="button"
           aria-label="Switch theme"
-          title="Switch theme"
+          type="button"
         >
           ☾
         </button>
 
-
         <button
           class="menu-toggle"
           id="menuToggle"
-          type="button"
-          aria-label="Open menu"
+          aria-label="Open navigation"
           aria-expanded="false"
+          type="button"
         >
 
           <span></span>
@@ -182,53 +167,92 @@
 
       </div>
 
-    </nav>
+    </div>
 
   </header>
 
 
   <main>
 
-    <!-- HERO -->
+    <!-- ==============================
+         HERO
+         ============================== -->
 
     <section
       class="hero"
       id="home"
     >
 
-      <div class="hero-container container">
+      <div class="hero-grid"></div>
 
-        <div class="hero-content">
+
+      <div class="container hero-layout">
+
+        <div class="hero-rail">
+
+          <span>
+            DATA SCIENCE
+          </span>
+
+          <i></i>
+
+          <span>
+            PORTFOLIO
+          </span>
+
+        </div>
+
+
+        <div class="hero-copy">
+
+          <div class="availability">
+
+            <span></span>
+
+            Open to internship opportunities
+
+          </div>
+
 
           <p class="hero-eyebrow">
-            Hello, I'm
+            Hi, I'm Syaqila.
           </p>
 
 
           <h1>
-            Syaqila Najwa<br>
-            Amalia Hambali
+            I like figuring out
+            <br>
+            what the data
+            <br>
+            <em>means.</em>
           </h1>
 
+          <div class="hero-description-row">
 
-          <h2>
-            Data Science Undergraduate
-          </h2>
-
-
-          <p class="hero-description">
-            I'm a Data Science undergraduate at BINUS University
-            with a growing interest in Data Analytics and Machine Learning.
-            I enjoy exploring data, testing different approaches,
-            and understanding why a result behaves the way it does.
-          </p>
+            <p>
+              Data Science undergraduate at BINUS University,
+              currently interested in Data Analytics and
+              Machine Learning. I enjoy testing different
+              approaches, comparing results, and understanding
+              why a model behaves the way it does.
+            </p>
 
 
-          <div class="availability">
+            <div class="hero-mini">
 
-            <span class="availability-dot"></span>
+              <small>
+                CURRENT
+              </small>
 
-            Open to internship opportunities
+              <strong>
+                ML
+              </strong>
+
+              <small>
+                + ANALYTICS
+              </small>
+
+            </div>
 
           </div>
 
@@ -239,20 +263,20 @@
               href="#projects"
               class="button button-primary"
             >
-              View Projects
+              Selected Work
             </a>
 
             <a
               href="mailto:syaqillanajwa25@gmail.com"
-              class="button button-secondary"
+              class="button button-outline"
             >
-              Contact Me
+              Say Hello
             </a>
 
           </div>
 
 
-          <div class="hero-social">
+          <div class="hero-links">
 
             <a
               href="https://www.linkedin.com/in/syaqilanajwa/"
@@ -275,9 +299,15 @@
         </div>
 
 
-        <div class="hero-photo hidden-anim">
+        <div class="hero-photo-wrap reveal">
 
-          <div class="photo-back"></div>
+          <div class="photo-accent"></div>
+
+
+          <span class="photo-no">
+            01
+          </span>
+
 
           <div class="photo-frame">
 
@@ -288,131 +318,205 @@
 
           </div>
 
-          <p class="photo-caption">
-            Jakarta, Indonesia
-          </p>
+
+          <div class="photo-card">
+
+            <small>
+              CURRENTLY EXPLORING
+            </small>
+
+            <strong>
+              Machine Learning
+              <br>
+              + Data Analytics
+            </strong>
+
+          </div>
+
+
+          <span class="photo-label">
+            SYAQILA / DATA SCIENCE
+          </span>
 
         </div>
+
+      </div>
+
+
+      <div class="container hero-stack">
+
+        <span>Python</span>
+        <span>SQL</span>
+        <span>Machine Learning</span>
+        <span>Deep Learning</span>
+        <span>AWS</span>
+        <span>Model Deployment</span>
 
       </div>
 
     </section>
 
 
-    <!-- ABOUT -->
+    <!-- ==============================
+         ABOUT
+         ============================== -->
 
     <section
-      class="section"
+      class="section about"
       id="about"
     >
 
       <div class="container">
 
-        <div class="section-heading hidden-anim">
+        <div class="section-heading reveal">
 
-          <p class="section-number">
-            01 / About
-          </p>
+          <span class="section-number">
+            01
+          </span>
 
-          <h2>
-            A little about me.
-          </h2>
+          <div>
+
+            <p class="section-label">
+              ABOUT
+            </p>
+
+            <h2>
+              Learning
+              <br>
+              by doing.
+            </h2>
+
+          </div>
 
         </div>
 
 
-        <div class="about-grid">
+        <div class="about-layout">
 
-          <div class="about-copy hidden-anim">
+          <article class="about-statement reveal">
+
+            <span class="quote-mark">
+              “
+            </span>
+
+            <div class="about-statement-content">
+
+              <h3>
+                I didn't start Data Science knowing exactly
+                what role I wanted.
+              </h3>
+
+              <p>
+                What kept me interested was the process:
+                trying things, comparing results,
+                and slowly figuring out what I actually enjoy.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="about-story reveal">
+
+            <span class="about-story-number">
+              02 / A LITTLE MORE
+            </span>
 
             <p>
-              I started Data Science because I was interested in technology,
-              without having one specific role in mind.
-              After working with different datasets, models, and projects,
-              I found that I really enjoy analyzing results
-              and understanding why something works the way it does.
+              I first chose Data Science because I was interested
+              in technology. After going through different courses
+              and projects, I found that I genuinely enjoy working
+              with data, especially when I can compare approaches
+              and understand why a result turns out a certain way.
             </p>
 
             <p>
-              I usually learn by trying things myself first.
-              When something doesn't make sense,
-              I experiment, read, and compare different approaches
-              until I understand it better.
+              Most of the time, I learn by experimenting.
+              If something doesn't work, I try another way,
+              read a little more, and keep going until it makes sense.
             </p>
 
-            <p class="about-personal">
-              Outside class, I usually spend my time reading,
-              listening to music, following F1, or baking.
-            </p>
+
+            <div class="about-tags">
+
+              <span>
+                Curious
+              </span>
+
+              <span>
+                Detail-oriented
+              </span>
+
+              <span>
+                Independent learner
+              </span>
+
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <div class="about-info reveal">
+
+          <div>
+
+            <small>
+              01 / FOCUS
+            </small>
+
+            <strong>
+              Data Analytics
+              <br>
+              Machine Learning
+            </strong>
 
           </div>
 
 
-          <div class="about-info hidden-anim">
+          <div>
 
-            <div class="info-row">
+            <small>
+              02 / EDUCATION
+            </small>
 
-              <span>
-                Current focus
-              </span>
+            <strong>
+              BINUS University
+              <br>
+              Data Science
+            </strong>
 
-              <strong>
-                Data Analytics & Machine Learning
-              </strong>
-
-            </div>
-
-
-            <div class="info-row">
-
-              <span>
-                University
-              </span>
-
-              <strong>
-                BINUS University
-              </strong>
-
-            </div>
+          </div>
 
 
-            <div class="info-row">
+          <div>
 
-              <span>
-                Major
-              </span>
+            <small>
+              03 / LANGUAGE
+            </small>
 
-              <strong>
-                Data Science
-              </strong>
+            <strong>
+              Indonesian
+              <br>
+              English
+            </strong>
 
-            </div>
-
-
-            <div class="info-row">
-
-              <span>
-                Languages
-              </span>
-
-              <strong>
-                Indonesian · English
-              </strong>
-
-            </div>
+          </div>
 
 
-            <div class="info-row">
+          <div>
 
-              <span>
-                Location
-              </span>
+            <small>
+              04 / OUTSIDE CLASS
+            </small>
 
-              <strong>
-                Jakarta, Indonesia
-              </strong>
-
-            </div>
+            <strong>
+              Reading · Music
+              <br>
+              F1 · Baking
+            </strong>
 
           </div>
 
@@ -423,59 +527,66 @@
     </section>
 
 
-    <!-- SKILLS -->
+    <!-- ==============================
+         SKILLS
+         ============================== -->
 
     <section
-      class="section section-alt"
+      class="section skills"
       id="skills"
     >
 
       <div class="container">
 
-        <div class="section-heading hidden-anim">
+        <div class="section-heading inverse-heading reveal">
 
-          <p class="section-number">
-            02 / Skills
-          </p>
+          <span class="section-number">
+            02
+          </span>
 
-          <h2>
-            Tools I've worked with.
-          </h2>
+          <div>
 
-          <p>
-            Most of these came from university projects,
-            assignments, and experiments I've worked on.
-          </p>
+            <p class="section-label">
+              TOOL MAP
+            </p>
+
+            <h2>
+              From data
+              <br>
+              to deployment.
+            </h2>
+
+          </div>
 
         </div>
 
 
-        <div class="skills-grid">
+        <div class="pipeline">
 
           <article
-            class="skill-card hidden-anim skills-content"
+            class="pipeline-step skills-group reveal"
           >
 
-            <p class="skill-label">
+            <span class="pipeline-dot">
               01
-            </p>
+            </span>
+
+            <small>
+              DATA
+            </small>
 
             <h3>
-              Data & Machine Learning
+              Explore
             </h3>
 
-
-            <div class="skills-list">
+            <div class="pipeline-items">
 
               <span class="skill-item">Python</span>
               <span class="skill-item">SQL</span>
               <span class="skill-item">R</span>
               <span class="skill-item">Pandas</span>
               <span class="skill-item">NumPy</span>
-              <span class="skill-item">Scikit-learn</span>
-              <span class="skill-item">XGBoost</span>
-              <span class="skill-item">Data Analysis</span>
-              <span class="skill-item">Feature Engineering</span>
+              <span class="skill-item">EDA</span>
 
             </div>
 
@@ -483,28 +594,42 @@
 
 
           <article
-            class="skill-card hidden-anim skills-content"
+            class="pipeline-step skills-group reveal"
           >
 
-            <p class="skill-label">
+            <span class="pipeline-dot">
               02
-            </p>
+            </span>
+
+            <small>
+              MACHINE LEARNING
+            </small>
 
             <h3>
-              Deep Learning
+              Model
             </h3>
 
+            <div class="pipeline-items">
 
-            <div class="skills-list">
+              <span class="skill-item">
+                Scikit-learn
+              </span>
 
-              <span class="skill-item">TensorFlow</span>
-              <span class="skill-item">Keras</span>
-              <span class="skill-item">CNN</span>
-              <span class="skill-item">LSTM</span>
-              <span class="skill-item">Transfer Learning</span>
-              <span class="skill-item">Computer Vision</span>
-              <span class="skill-item">Autoencoder</span>
-              <span class="skill-item">GAN</span>
+              <span class="skill-item">
+                XGBoost
+              </span>
+
+              <span class="skill-item">
+                Random Forest
+              </span>
+
+              <span class="skill-item">
+                Feature Engineering
+              </span>
+
+              <span class="skill-item">
+                Optuna
+              </span>
 
             </div>
 
@@ -512,38 +637,121 @@
 
 
           <article
-            class="skill-card hidden-anim skills-content"
+            class="pipeline-step skills-group reveal"
           >
 
-            <p class="skill-label">
+            <span class="pipeline-dot">
               03
-            </p>
+            </span>
+
+            <small>
+              DEEP LEARNING
+            </small>
 
             <h3>
-              Deployment & Development
+              Learn
             </h3>
 
+            <div class="pipeline-items">
 
-            <div class="skills-list">
+              <span class="skill-item">
+                TensorFlow
+              </span>
 
-              <span class="skill-item">AWS SageMaker</span>
-              <span class="skill-item">S3</span>
-              <span class="skill-item">EC2</span>
-              <span class="skill-item">Boto3</span>
-              <span class="skill-item">MLflow</span>
-              <span class="skill-item">Optuna</span>
-              <span class="skill-item">FastAPI</span>
-              <span class="skill-item">Streamlit</span>
-              <span class="skill-item">Docker</span>
-              <span class="skill-item">Git</span>
-              <span class="skill-item">GitHub</span>
-              <span class="skill-item">HTML</span>
-              <span class="skill-item">CSS</span>
-              <span class="skill-item">JavaScript</span>
+              <span class="skill-item">
+                Keras
+              </span>
+
+              <span class="skill-item">
+                CNN
+              </span>
+
+              <span class="skill-item">
+                LSTM
+              </span>
+
+              <span class="skill-item">
+                Computer Vision
+              </span>
+
+              <span class="skill-item">
+                GAN
+              </span>
 
             </div>
 
           </article>
+
+
+          <article
+            class="pipeline-step skills-group reveal"
+          >
+
+            <span class="pipeline-dot">
+              04
+            </span>
+
+            <small>
+              DEPLOYMENT
+            </small>
+
+            <h3>
+              Ship
+            </h3>
+
+            <div class="pipeline-items">
+
+              <span class="skill-item">
+                AWS SageMaker
+              </span>
+
+              <span class="skill-item">
+                EC2
+              </span>
+
+              <span class="skill-item">
+                S3
+              </span>
+
+              <span class="skill-item">
+                MLflow
+              </span>
+
+              <span class="skill-item">
+                FastAPI
+              </span>
+
+              <span class="skill-item">
+                Streamlit
+              </span>
+
+              <span class="skill-item">
+                Docker
+              </span>
+
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <div class="secondary-tools reveal">
+
+          <small>
+            ALSO WORKED WITH
+          </small>
+
+          <div>
+
+            <span>Git</span>
+            <span>GitHub</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Figma</span>
+
+          </div>
 
         </div>
 
@@ -552,76 +760,128 @@
     </section>
 
 
-    <!-- PROJECTS -->
+    <!-- ==============================
+         PROJECTS
+         ============================== -->
 
     <section
-      class="section"
+      class="section projects"
       id="projects"
     >
 
       <div class="container">
 
-        <div class="section-heading hidden-anim">
+        <div class="section-heading reveal">
 
-          <p class="section-number">
-            03 / Projects
-          </p>
+          <span class="section-number">
+            03
+          </span>
 
-          <h2>
-            Selected projects.
-          </h2>
+          <div>
 
-          <p>
-            A selection of projects covering machine learning,
-            deep learning, deployment, time-series forecasting,
-            and frontend development.
-          </p>
+            <p class="section-label">
+              SELECTED WORK
+            </p>
+
+            <h2>
+              Built,
+              <br>
+              tested,
+              <br>
+              learned.
+            </h2>
+
+          </div>
 
         </div>
 
 
-        <!-- FEATURED PROJECT -->
+        <!-- CREDIT SCORE -->
 
-        <article class="featured-project hidden-anim">
+        <article class="featured-project reveal">
 
-          <div class="featured-content">
-
-            <p class="project-type">
-              Featured Project · Machine Learning / AWS
-            </p>
-
-            <h3>
-              Credit Score Prediction
-              & Cloud Deployment
-            </h3>
-
-            <p>
-              Developed an end-to-end multiclass credit score
-              classification project covering preprocessing,
-              model comparison, experiment tracking,
-              evaluation, and cloud deployment.
-            </p>
-
-            <p>
-              Logistic Regression, Decision Tree,
-              Random Forest, and Extra Trees were compared,
-              with Extra Trees selected as the final model.
-            </p>
+          <span class="project-bg-number">
+            01
+          </span>
 
 
-            <div class="project-result">
-              73.98% Accuracy · 0.740 Weighted F1
+          <div class="featured-copy">
+
+            <div class="project-categories">
+
+              <span>
+                MACHINE LEARNING
+              </span>
+
+              <span>
+                AWS DEPLOYMENT
+              </span>
+
             </div>
 
 
-            <div class="project-tech">
+            <h3>
+              Credit Score
+              <br>
+              Prediction
+            </h3>
+
+
+            <p>
+              An end-to-end multiclass classification project
+              covering preprocessing, model comparison,
+              experiment tracking, evaluation,
+              and cloud deployment.
+            </p>
+
+            <p>
+              Extra Trees was selected after comparing
+              Logistic Regression, Decision Tree,
+              Random Forest, and Extra Trees.
+            </p>
+
+
+            <div class="featured-metrics">
+
+              <div>
+
+                <small>
+                  ACCURACY
+                </small>
+
+                <strong
+                  class="counter"
+                  data-value="73.98"
+                  data-suffix="%"
+                >
+                  73.98%
+                </strong>
+
+              </div>
+
+
+              <div>
+
+                <small>
+                  WEIGHTED F1
+                </small>
+
+                <strong>
+                  0.740
+                </strong>
+
+              </div>
+
+            </div>
+
+
+            <div class="tech-tags">
 
               <span>Python</span>
               <span>Scikit-learn</span>
               <span>MLflow</span>
               <span>AWS SageMaker</span>
               <span>Streamlit</span>
-              <span>Boto3</span>
 
             </div>
 
@@ -638,11 +898,25 @@
           </div>
 
 
-          <div class="featured-image">
+          <div class="featured-screen">
+
+            <div class="browser-bar">
+
+              <div>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <small>
+                credit-score / deployment
+              </small>
+
+            </div>
 
             <img
               src="assets/projects/credit-score a.png"
-              alt="Credit Score Prediction project interface"
+              alt="Credit Score Prediction project preview"
             >
 
           </div>
@@ -650,81 +924,114 @@
         </article>
 
 
-        <div class="projects-grid">
+        <!-- DISASTER + PLACEMENT -->
 
-          <!-- DISASTER -->
+        <div class="project-split">
 
-          <article class="project-card hidden-anim">
+          <article class="project-card disaster-project reveal">
 
-            <div>
+            <div class="project-image">
 
-              <p class="project-type">
-                Computer Vision
-              </p>
+              <img
+                src="assets/projects/disaster.png"
+                alt="Disaster Image Classification project"
+              >
+
+              <span>
+                02
+              </span>
+
+            </div>
+
+
+            <div class="project-card-copy">
+
+              <small>
+                COMPUTER VISION
+              </small>
 
               <h3>
-                Disaster Image Classification
+                Disaster Image
+                Classification
               </h3>
 
               <p>
                 Compared a CNN built from scratch
                 with EfficientNetB0 transfer learning
-                for four-class disaster image classification.
+                across four disaster classes.
               </p>
 
-              <p class="project-result">
+              <div class="result-tag">
                 81.63% Accuracy · 0.7939 Macro F1
-              </p>
-
-
-              <div class="project-tech">
-
-                <span>TensorFlow</span>
-                <span>Keras</span>
-                <span>CNN</span>
-                <span>EfficientNetB0</span>
-
               </div>
 
+              <a
+                href="https://github.com/syaqillanajwa25-ops/disaster-image-classification"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View project ↗
+              </a>
+
             </div>
-
-
-            <a
-              href="https://github.com/syaqillanajwa25-ops/disaster-image-classification"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-link"
-            >
-              GitHub ↗
-            </a>
 
           </article>
 
 
-          <!-- PLACEMENT -->
+          <article class="project-card placement-project reveal">
 
-          <article class="project-card hidden-anim">
+            <div class="placement-visual">
 
-            <div>
+              <span>
+                INPUT
+              </span>
 
-              <p class="project-type">
-                Machine Learning Application
-              </p>
+              <strong>
+                Student Profile
+              </strong>
+
+              <i>↓</i>
+
+              <span>
+                MODEL
+              </span>
+
+              <strong>
+                Random Forest
+              </strong>
+
+              <i>↓</i>
+
+              <span>
+                OUTPUT
+              </span>
+
+              <strong>
+                Placement + Salary
+              </strong>
+
+            </div>
+
+
+            <div class="project-card-copy">
+
+              <small>
+                03 / ML APPLICATION
+              </small>
 
               <h3>
-                Student Placement & Salary Prediction
+                Student Placement
+                & Salary Prediction
               </h3>
 
               <p>
-                Built an application with two prediction tasks:
-                student placement classification
+                One application with two prediction tasks:
+                placement classification
                 and salary estimation.
               </p>
 
+              <div class="tech-tags">
 
-              <div class="project-tech">
-
-                <span>Random Forest</span>
                 <span>Optuna</span>
                 <span>MLflow</span>
                 <span>FastAPI</span>
@@ -732,197 +1039,285 @@
 
               </div>
 
+              <a
+                href="https://github.com/syaqillanajwa25-ops/student-placement-salary-prediction"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View project ↗
+              </a>
+
             </div>
-
-
-            <a
-              href="https://github.com/syaqillanajwa25-ops/student-placement-salary-prediction"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-link"
-            >
-              GitHub ↗
-            </a>
 
           </article>
 
-
-          <!-- STOCK -->
-
-          <article class="project-card hidden-anim">
-
-            <div>
-
-              <p class="project-type">
-                Time Series
-              </p>
-
-              <h3>
-                Stock Time-Series Prediction with LSTM
-              </h3>
-
-              <p>
-                Built LSTM models using historical
-                FB and IBM closing prices
-                for time-series forecasting.
-              </p>
-
-              <p class="project-result">
-                FB RMSE 4.06 · IBM RMSE 2.65
-              </p>
+        </div>
 
 
-              <div class="project-tech">
+        <!-- STOCK -->
 
-                <span>Python</span>
-                <span>TensorFlow</span>
-                <span>Keras</span>
-                <span>LSTM</span>
+        <article class="stock-project reveal">
 
+          <span class="stock-number">
+            04
+          </span>
+
+
+          <div class="stock-title">
+
+            <small>
+              TIME SERIES
+            </small>
+
+            <h3>
+              Stock Prediction
+              <br>
+              with LSTM
+            </h3>
+
+          </div>
+
+
+          <div class="stock-copy">
+
+            <p>
+              Built LSTM models using historical FB and IBM
+              closing prices for time-series forecasting.
+            </p>
+
+            <div class="stock-metrics">
+
+              <div>
+                <small>FB / RMSE</small>
+                <strong>4.06</strong>
+              </div>
+
+              <div>
+                <small>IBM / RMSE</small>
+                <strong>2.65</strong>
               </div>
 
             </div>
-
 
             <a
               href="https://github.com/syaqillanajwa25-ops/stock-time-series-lstm"
               target="_blank"
               rel="noopener noreferrer"
-              class="project-link"
             >
-              GitHub ↗
+              View repository ↗
             </a>
+
+          </div>
+
+
+          <div class="stock-chart">
+
+            <div class="chart-grid"></div>
+
+            <svg
+              viewBox="0 0 400 180"
+              preserveAspectRatio="none"
+              aria-hidden="true"
+            >
+              <polyline
+                class="chart-line chart-line-one"
+                points="
+                  0,140
+                  38,130
+                  68,143
+                  100,98
+                  135,114
+                  172,74
+                  204,89
+                  242,54
+                  278,65
+                  312,34
+                  347,49
+                  400,20
+                "
+              />
+
+              <polyline
+                class="chart-line chart-line-two"
+                points="
+                  0,157
+                  38,148
+                  75,121
+                  110,132
+                  146,100
+                  186,111
+                  220,78
+                  255,92
+                  290,63
+                  325,75
+                  360,43
+                  400,56
+                "
+              />
+
+            </svg>
+
+
+            <div class="chart-label chart-label-one">
+              FB
+            </div>
+
+            <div class="chart-label chart-label-two">
+              IBM
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- GAN + CLASH -->
+
+        <div class="creative-projects">
+
+          <article class="gan-project reveal">
+
+            <div class="gan-top">
+
+              <span>
+                05
+              </span>
+
+              <small>
+                GENERATIVE DEEP LEARNING
+              </small>
+
+            </div>
+
+
+            <div class="gan-diagram">
+
+              <div>
+                G
+              </div>
+
+              <span>
+                ↔
+              </span>
+
+              <div>
+                D
+              </div>
+
+            </div>
+
+
+            <div class="gan-copy">
+
+              <h3>
+                Image Generation
+                with GAN
+              </h3>
+
+              <p>
+                Exploring adversarial training
+                between Generator and Discriminator networks.
+              </p>
+
+              <a
+                href="https://github.com/syaqillanajwa25-ops/image-generation-gan"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View project ↗
+              </a>
+
+            </div>
 
           </article>
 
 
-          <!-- GAN -->
+          <article class="clash-project reveal">
 
-          <article class="project-card hidden-anim">
+            <div class="clash-browser">
 
-            <div>
+              <div class="clash-browser-top">
 
-              <p class="project-type">
-                Generative Deep Learning
-              </p>
+                <span></span>
+                <span></span>
+                <span></span>
 
-              <h3>
-                Image Generation with GAN
-              </h3>
-
-              <p>
-                Explored adversarial training
-                by building Generator and Discriminator networks
-                for synthetic image generation.
-              </p>
+              </div>
 
 
-              <div class="project-tech">
+              <div class="clash-ui">
 
-                <span>Python</span>
-                <span>TensorFlow</span>
-                <span>Keras</span>
-                <span>GAN</span>
+                <div class="clash-nav">
+                  BaNG
+                </div>
+
+                <div class="clash-hero">
+                  CLASH
+                </div>
+
+                <div class="clash-ui-grid">
+
+                  <div></div>
+                  <div></div>
+                  <div></div>
+
+                </div>
 
               </div>
 
             </div>
 
 
-            <a
-              href="https://github.com/syaqillanajwa25-ops/image-generation-gan"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-link"
-            >
-              GitHub ↗
-            </a>
+            <div class="clash-copy">
 
-          </article>
-
-
-          <!-- CLASH -->
-
-          <article class="project-card hidden-anim">
-
-            <div>
-
-              <p class="project-type">
-                HCI · Frontend
-              </p>
+              <small>
+                06 / HCI · FRONTEND
+              </small>
 
               <h3>
                 Clash of BaNG
               </h3>
 
               <p>
-                Designed a Figma prototype
-                and developed it into a responsive
-                five-page community website
-                with filtering, animations,
-                navigation, and form validation.
+                A responsive five-page community website
+                designed in Figma and developed using
+                HTML, CSS, and JavaScript.
               </p>
 
-
-              <div class="project-tech">
-
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Figma</span>
-
-              </div>
+              <a
+                href="https://github.com/syaqillanajwa25-ops/clash-of-bang-website"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View project ↗
+              </a>
 
             </div>
 
-
-            <a
-              href="https://github.com/syaqillanajwa25-ops/clash-of-bang-website"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-link"
-            >
-              GitHub ↗
-            </a>
-
           </article>
 
-
-          <!-- MORE -->
-
-          <article class="project-card project-more hidden-anim">
-
-            <div>
-
-              <p class="project-type">
-                More Projects
-              </p>
-
-              <h3>
-                More experiments on GitHub.
-              </h3>
-
-              <p>
-                Other projects include Autoencoder,
-                Heart Disease Prediction,
-                Student Burnout Prediction,
-                Used Car Price Prediction,
-                and several other university projects.
-              </p>
-
-            </div>
+        </div>
 
 
-            <a
-              href="https://github.com/syaqillanajwa25-ops?tab=repositories"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-link"
-            >
-              View all repositories ↗
-            </a>
+        <div class="more-projects reveal">
 
-          </article>
+          <small>
+            MORE WORK
+          </small>
+
+          <p>
+            Autoencoder · Heart Disease Prediction ·
+            Student Burnout Prediction · Used Car Price Prediction ·
+            and other university projects.
+          </p>
+
+          <a
+            href="https://github.com/syaqillanajwa25-ops?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Explore GitHub ↗
+          </a>
 
         </div>
 
@@ -931,128 +1326,227 @@
     </section>
 
 
-    <!-- EXPERIENCE -->
+    <!-- ==============================
+         EXPERIENCE
+         ============================== -->
 
     <section
-      class="section section-alt"
+      class="section experience"
       id="experience"
     >
 
       <div class="container">
 
-        <div class="section-heading hidden-anim">
+        <div class="section-heading reveal">
 
-          <p class="section-number">
-            04 / Experience
-          </p>
+          <span class="section-number">
+            04
+          </span>
 
-          <h2>
-            Organizations & volunteering.
-          </h2>
+          <div>
 
-          <p>
-            Experiences outside class that helped me
-            improve communication, teamwork,
-            coordination, and responsibility.
-          </p>
+            <p class="section-label">
+              EXPERIENCE
+            </p>
+
+            <h2>
+              Beyond
+              <br>
+              academics.
+            </h2>
+
+          </div>
 
         </div>
 
 
-        <div class="timeline">
+        <div class="experience-list">
 
-          <article class="timeline-item hidden-anim">
+          <article class="experience-row reveal">
 
-            <span class="timeline-date">
-              2024 — Present
+            <span class="experience-date">
+              2024 — NOW
             </span>
 
-            <h3>
-              BINUS BVoice
-            </h3>
 
-            <p class="timeline-role">
-              Staff Operator · P3K Coordinator · P3K Mentor
-            </p>
+            <div class="experience-name">
 
-            <p>
-              Started behind the scenes during live broadcasts,
-              later coordinated five P3K programs,
-              and now support the next coordinator
-              and team as a mentor.
-            </p>
+              <h3>
+                BINUS BVoice
+              </h3>
+
+              <small>
+                Organization
+              </small>
+
+            </div>
+
+
+            <div class="experience-detail">
+
+              <strong>
+                Staff Operator · P3K Coordinator · P3K Mentor
+              </strong>
+
+              <p>
+                Started behind live broadcasts as a staff operator,
+                later coordinated five P3K programs,
+                and now support the next coordinator
+                and team as a mentor.
+              </p>
+
+            </div>
 
           </article>
 
 
-          <article class="timeline-item hidden-anim">
+          <article class="experience-row reveal">
 
-            <span class="timeline-date">
-              October 2025
+            <span class="experience-date">
+              OCT 2025
             </span>
 
-            <h3>
-              BINUS Kemanggisan Sport-Fest
-            </h3>
 
-            <p class="timeline-role">
-              Public Relations Committee
-            </p>
+            <div class="experience-name">
 
-            <p>
-              Supported communication between
-              the committee, sports PICs,
-              and participants during registration
-              and the event.
-            </p>
+              <h3>
+                Kemanggisan Sport-Fest
+              </h3>
+
+              <small>
+                Committee
+              </small>
+
+            </div>
+
+
+            <div class="experience-detail">
+
+              <strong>
+                Public Relations Committee
+              </strong>
+
+              <p>
+                Supported communication between the committee,
+                sports PICs, and participants during
+                registration and the event.
+              </p>
+
+            </div>
 
           </article>
 
 
-          <article class="timeline-item hidden-anim">
+          <article class="experience-row reveal">
 
-            <span class="timeline-date">
-              December 2025
+            <span class="experience-date">
+              DEC 2025
             </span>
 
-            <h3>
-              Teach For Indonesia
-            </h3>
 
-            <p class="timeline-role">
-              Teaching Volunteer
-            </p>
+            <div class="experience-name">
 
-            <p>
-              Joined a five-session teaching program
-              at PAUD Umi in West Jakarta
-              and helped prepare and lead
-              different learning activities.
-            </p>
+              <h3>
+                Teach For Indonesia
+              </h3>
+
+              <small>
+                Volunteering
+              </small>
+
+            </div>
+
+
+            <div class="experience-detail">
+
+              <strong>
+                Teaching Volunteer
+              </strong>
+
+              <p>
+                Joined a five-session teaching program
+                at PAUD Umi in West Jakarta
+                and helped prepare and lead
+                different learning activities.
+              </p>
+
+            </div>
 
           </article>
 
 
-          <article class="timeline-item hidden-anim">
+          <article class="experience-row reveal">
 
-            <span class="timeline-date">
-              February 2026
+            <span class="experience-date">
+              DEC 2025
             </span>
 
-            <h3>
-              ICOBAR & SMART
-            </h3>
 
-            <p class="timeline-role">
-              Program Committee
-            </p>
+            <div class="experience-name">
 
-            <p>
-              Accompanied keynote speakers and VIP guests,
-              coordinated with other committee teams,
-              and communicated with guests
-              in Indonesian and English.
-            </p>
+              <h3>
+                BINUS Rector Cup
+              </h3>
+
+              <small>
+                Committee
+              </small>
+
+            </div>
+
+
+            <div class="experience-detail">
+
+              <strong>
+                Equipment & SIC Committee
+              </strong>
+
+              <p>
+                Managed event equipment, logistics,
+                lighting, and sound while supporting
+                medical and security operations
+                during the competition.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="experience-row reveal">
+
+            <span class="experience-date">
+              FEB 2026
+            </span>
+
+
+            <div class="experience-name">
+
+              <h3>
+                ICOBAR & SMART
+              </h3>
+
+              <small>
+                Conference
+              </small>
+
+            </div>
+
+
+            <div class="experience-detail">
+
+              <strong>
+                Program Committee
+              </strong>
+
+              <p>
+                Accompanied keynote speakers and VIP guests,
+                coordinated with other committee teams,
+                and communicated with guests
+                in Indonesian and English.
+              </p>
+
+            </div>
 
           </article>
 
@@ -1063,45 +1557,51 @@
     </section>
 
 
-    <!-- EDUCATION -->
+    <!-- ==============================
+         EDUCATION
+         ============================== -->
 
-    <section
-      class="section"
-      id="education"
-    >
+    <section class="education">
 
       <div class="container">
 
-        <div class="section-heading hidden-anim">
+        <div class="education-layout reveal">
 
-          <p class="section-number">
-            05 / Education
-          </p>
+          <span class="education-no">
+            05 / EDU
+          </span>
 
-          <h2>
-            Education.
-          </h2>
-
-        </div>
-
-
-        <div class="education-card hidden-anim">
 
           <div>
 
-            <h3>
-              Bachelor of Computer Science
-            </h3>
+            <small>
+              2024 — 2028
+            </small>
 
-            <p>
-              Data Science · BINUS University
-            </p>
+            <h2>
+              BINUS
+              <br>
+              University
+            </h2>
 
           </div>
 
-          <span>
-            2024 — 2028
-          </span>
+
+          <div class="education-details">
+
+            <span>
+              Bachelor of Computer Science
+            </span>
+
+            <strong>
+              Data Science
+            </strong>
+
+            <small>
+              Jakarta, Indonesia
+            </small>
+
+          </div>
 
         </div>
 
@@ -1112,7 +1612,9 @@
   </main>
 
 
-  <!-- CONTACT -->
+  <!-- ==============================
+       FOOTER
+       ============================== -->
 
   <footer
     class="footer"
@@ -1121,24 +1623,27 @@
 
     <div class="container">
 
-      <div class="footer-main hidden-anim">
+      <div class="footer-heading reveal">
 
-        <div>
+        <small>
+          06 / CONTACT
+        </small>
 
-          <p class="footer-label">
-            06 / Contact
-          </p>
+        <h2>
+          LET'S
+          <br>
+          CONNECT.
+        </h2>
 
-          <h2>
-            Let's connect.
-          </h2>
+      </div>
 
-          <p>
-            I'm currently looking for internship opportunities
-            and always happy to connect.
-          </p>
 
-        </div>
+      <div class="footer-content reveal">
+
+        <p>
+          I'm currently looking for internship opportunities
+          and always happy to connect.
+        </p>
 
 
         <div class="footer-links">
@@ -1146,7 +1651,8 @@
           <a
             href="mailto:syaqillanajwa25@gmail.com"
           >
-            Email ↗
+            <span>Email</span>
+            <span>↗</span>
           </a>
 
           <a
@@ -1154,7 +1660,8 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            LinkedIn ↗
+            <span>LinkedIn</span>
+            <span>↗</span>
           </a>
 
           <a
@@ -1162,7 +1669,8 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            GitHub ↗
+            <span>GitHub</span>
+            <span>↗</span>
           </a>
 
           <a
@@ -1170,7 +1678,8 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            Instagram ↗
+            <span>Instagram</span>
+            <span>↗</span>
           </a>
 
         </div>
@@ -1181,11 +1690,11 @@
       <div class="footer-bottom">
 
         <span>
-          Syaqila Najwa Amalia Hambali
+          SYAQILA NAJWA AMALIA HAMBALI
         </span>
 
         <span>
-          Data Science · 2026
+          DATA SCIENCE / 2026
         </span>
 
       </div>
